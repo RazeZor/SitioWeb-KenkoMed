@@ -1,87 +1,405 @@
 ---
 const team = [
   {
-    name: "Dr. María González",
-    specialty: "Kinesiología Clínica",
-    description: "Especialista en rehabilitación neurológica con más de 15 años de experiencia.",
-    image: "https://images.pexels.com/photos/5327583/pexels-photo-5327583.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+    name: "Ignacio Castillo",
+    specialty: "Jefe de Proyecto",
+    description: "Encargado de planificar, organizar y supervisar el proyecto. Gestiona tiempos, recursos, presupuesto y riesgos, asegurando que el proyecto avance según lo previsto y se entregue dentro del plazo y alcance definidos.",
+    image: "/public/FotoNico.jpeg"
   },
   {
-    name: "Dr. Carlos Mendoza",
-    specialty: "Psicología Clínica",
-    description: "Experto en terapia cognitivo-conductual y tratamiento de trastornos de ansiedad.",
-    image: "https://images.pexels.com/photos/5327590/pexels-photo-5327590.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+    name: "Ignacio Cabrera",
+    specialty: "Arquitecto de Software",
+    description: "Responsable de diseñar la estructura técnica del sistema. Define la arquitectura general, selecciona tecnologías, establece patrones de diseño y asegura escalabilidad, seguridad, mantenibilidad y rendimiento.",
+    image: "/public/FotoNico.jpeg"
   },
   {
-    name: "Dra. Ana Rodriguez",
-    specialty: "Fisioterapia Deportiva",
-    description: "Especializada en lesiones deportivas y rehabilitación de atletas de alto rendimiento.",
-    image: "https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+    name: "Nicolas Jeldres",
+    specialty: "Desarrollador Front-End",
+    description: "Implementa la interfaz visual del sistema. Traduce los diseños de UI asegurando compatibilidad entre navegadores y dispositivos, comunicándose con el back-end para garantizar una experiencia de usuario fluida.",
+    image: "/public/FotoNico.jpeg"
   },
   {
-    name: "Dr. Luis Morales",
-    specialty: "Psicología Infantil",
-    description: "Dedicado al tratamiento psicológico de niños y adolescentes con enfoque humanista.",
-    image: "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
-  }
+    name: "Sebastián Molina",
+    specialty: "Desarrollador Back-End",
+    description: "Responsable de la lógica del servidor, gestión de bases de datos y creación de APIs. Se enfoca en procesamiento de datos, seguridad, autenticación y estabilidad general del sistema.",
+    image: "/public/FotoNico.jpeg"
+  },
+  
 ];
 ---
 
-<section id="equipo" class="py-20 bg-gradient-to-br from-blue-50 to-medical-50">
-  <div class="container mx-auto px-6">
+<section id="equipo" class="py-20 team-section relative overflow-hidden">
+  <!-- Agregado overlay dinámico para el fondo de pantalla -->
+  <div id="background-overlay" class="background-overlay"></div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Título y descripción -->
     <div class="text-center mb-16 section-animate">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-        Nuestro <span class="text-primary-600">Equipo Médico</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Nuestro <span class="text-primary-600">Equipo del Proyecto</span>
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Profesionales altamente calificados comprometidos con brindar la mejor atención 
-        y utilizar tecnología de vanguardia en cada tratamiento.
+      <p class="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+        Profesionales altamente calificados comprometidos con el desarrollo del sistema Kenkomed,
+        asegurando calidad, eficiencia y confiabilidad en cada etapa del proyecto.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Mejorado el grid para mejor centrado y responsividad -->
+    <div class="flex flex-wrap justify-center gap-8 mb-12">
       {team.map((member, index) => (
-        <div class="group team-card section-animate bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
-             style={`animation-delay: ${index * 0.1}s;`}>
-          <div class="relative overflow-hidden">
-            <img 
-              src={member.image} 
+        <div 
+          class="card cursor-pointer" 
+          style={`animation-delay: ${index * 0.1}s;`}
+          data-member-image={member.image}
+          data-member-name={member.name}
+        >
+          <div class="content">
+            <!-- Imagen circular -->
+            <img
+              src={member.image || "/placeholder.svg"}
               alt={member.name}
-              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-md"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-primary-600 transition-colors">
-              {member.name}
-            </h3>
-            
-            <div class="inline-block bg-gradient-to-r from-primary-100 to-medical-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
-              {member.specialty}
-            </div>
-            
-            <p class="text-gray-600 text-sm leading-relaxed">
-              {member.description}
-            </p>
 
-            <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div class="flex space-x-3">
-                <button class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center hover:bg-primary-200 transition-colors">
-                  <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
-                  </svg>
-                </button>
-                <button class="w-8 h-8 bg-medical-100 rounded-full flex items-center justify-center hover:bg-medical-200 transition-colors">
-                  <svg class="w-4 h-4 text-medical-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <!-- Nombre -->
+            <h3 class="text-lg font-bold text-gray-800 mb-1 text-center">{member.name}</h3>
+
+            <!-- Especialidad -->
+            <span class="text-sm text-primary-600 font-medium block mb-3 text-center">
+              {member.specialty}
+            </span>
+
+            <!-- Descripción -->
+            <p class="text-sm text-gray-600 leading-relaxed text-center">{member.description}</p>
           </div>
         </div>
       ))}
     </div>
+
+    <!-- Botón de Conocer más -->
+    <div class="flex justify-center mt-12">
+      <a href="#about" class="bg-primary-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:scale-105 transition-transform duration-300">
+        Conoce más sobre nosotros
+      </a>
+    </div>
+
   </div>
 </section>
+<style scoped>
+  .team-section {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Estilos para el overlay de fondo dinámico */
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/MINIS.png');
+    background-size: 60% auto;
+    background-position: right 95% center;
+    background-repeat: no-repeat;
+    opacity: 0.85; /* 👈 Que esté visible desde el inicio */
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+  }
+
+  .background-overlay.active {
+    opacity: 0.85;
+    transform: translateX(0);
+  }
+
+  .background-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+  }
+
+  /* Botón para cerrar el overlay */
+  .close-overlay-btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .close-overlay-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .close-overlay-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+
+  .team-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mejoradas las cards para mejor centrado y responsividad */
+  .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    border-radius: 24px;
+    line-height: 1.6;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 5;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 24px;
+    border-radius: 22px;
+    color: #000000;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 100%;
+    text-align: center;
+  }
+
+  .content::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%);
+    background: linear-gradient(135deg, #ced8ff 0%, #a8b8ff 100%);
+    z-index: -1;
+    transform-origin: bottom;
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .content::after {
+    position: absolute;
+    content: "";
+    top: -8%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%);
+    background: linear-gradient(135deg, #e7ecff 0%, #d1dcff 100%);
+    z-index: -2;
+    transform-origin: bottom;
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .content svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .content .para {
+    z-index: 1;
+    opacity: 1;
+    font-size: 18px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .content .link {
+    z-index: 1;
+    color: #fea000;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .content .link:hover {
+    text-decoration: underline;
+  }
+
+  .card:hover {
+    transform: translate(0px, -16px) scale(1.02);
+  }
+
+  .card:hover .content::before {
+    rotate: -8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #b8c8ff 0%, #9bb0ff 100%);
+  }
+
+  .card:hover .content::after {
+    rotate: 8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d4e0ff 0%, #c2d2ff 100%);
+  }
+
+  /* Efectos adicionales para la interacción */
+  .card:active {
+    transform: translate(0px, -12px) scale(0.98);
+  }
+
+  /* Responsividad mejorada */
+  @media (max-width: 1400px) {
+    .card {
+      width: 260px;
+      min-width: 260px;
+      max-width: 260px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .card {
+      width: 240px;
+      min-width: 240px;
+      max-width: 240px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 220px;
+      min-width: 220px;
+      max-width: 220px;
+    }
+    
+    .content {
+      padding: 20px 16px;
+    }
+  }
+</style>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+    const backgroundOverlay = document.getElementById('background-overlay');
+    const closeBtn = document.getElementById('close-overlay');
+    let isOverlayActive = false;
+
+    cards.forEach(card => {
+      card.addEventListener('click', function() {
+        const memberImage = this.getAttribute('data-member-image');
+        const memberName = this.getAttribute('data-member-name');
+        
+        if (memberImage && backgroundOverlay) {
+          console.log('[v0] Aplicando imagen de fondo:', memberImage);
+          
+          // Si ya hay un overlay activo, hacer transición suave
+          if (isOverlayActive) {
+            // Fade out temporalmente para cambiar imagen
+            backgroundOverlay.style.opacity = '0.3';
+            
+            setTimeout(() => {
+              backgroundOverlay.style.backgroundImage = `url("${memberImage}")`;
+              backgroundOverlay.style.opacity = '0.85';
+            }, 200);
+          } else {
+            // Primera vez activando el overlay
+            backgroundOverlay.style.backgroundImage = `url("${memberImage}")`;
+            backgroundOverlay.style.backgroundSize = '60% auto';
+            backgroundOverlay.style.backgroundPosition = '2% center';
+            backgroundOverlay.style.backgroundRepeat = 'no-repeat';
+            
+            setTimeout(() => {
+              backgroundOverlay.classList.add('active');
+              closeBtn?.classList.add('show');
+            }, 50);
+            
+            isOverlayActive = true;
+          }
+          
+          // Agregar efecto de vibración sutil a la card clickeada
+          this.style.animation = 'cardPulse 0.6s ease-out';
+          
+          setTimeout(() => {
+            this.style.animation = '';
+          }, 600);
+        }
+      });
+    });
+
+    // Función para cerrar el overlay
+    function closeOverlay() {
+      if (backgroundOverlay && isOverlayActive) {
+        backgroundOverlay.classList.remove('active');
+        closeBtn?.classList.remove('show');
+        isOverlayActive = false;
+        
+        setTimeout(() => {
+          backgroundOverlay.style.backgroundImage = '';
+        }, 800);
+      }
+    }
+
+    // Cerrar con el botón
+    closeBtn?.addEventListener('click', closeOverlay);
+    
+    // Cerrar con ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isOverlayActive) {
+        closeOverlay();
+      }
+    });
+
+    // Cerrar clickeando en el overlay (opcional)
+    backgroundOverlay?.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeOverlay();
+      }
+    });
+  });
+
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes cardPulse {
+      0% { transform: translate(0px, -16px) scale(1.02); }
+      50% { transform: translate(0px, -20px) scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+      100% { transform: translate(0px, -16px) scale(1.02); }
+    }
+  `;
+  document.head.appendChild(style);
+</script>

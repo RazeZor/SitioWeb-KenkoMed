@@ -1,57 +1,68 @@
----
----
-
 <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
-  <nav class="container mx-auto px-6 py-4">
-    <div class="flex items-center justify-between">
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <span class="text-2xl font-bold text-gray-800">Kenkomed</span>
-      </div>
+  <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="#inicio" class="flex items-center space-x-3">
+      <img src="logonegro.ico" alt="KenkoMed Logo" width="90" class="object-contain">
+    </a>
 
-      <!-- Navigation Links -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#inicio" class="nav-link text-gray-900 hover:text-primary-600 font-medium transition-colors duration-200">Inicio</a>
-        <a href="#servicios" class="nav-link text-gray-900 hover:text-primary-600 font-medium transition-colors duration-200">Servicios</a>
-        <a href="#funcionalidades" class="nav-link text-gray-900 hover:text-primary-600 font-medium transition-colors duration-200">Funcionalidades</a>
-        <a href="#equipo" class="nav-link text-gray-900 hover:text-primary-600 font-medium transition-colors duration-200">Equipo Médico</a>
-        <a href="#contacto" class="nav-link text-gray-900 hover:text-primary-600 font-medium transition-colors duration-200">Contacto</a>
-      </div>
-
-      <!-- CTA Button -->
-      <div class="hidden md:block">
-        <button class="bg-white text-gray-900 px-6 py-2.5 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 border-inherit border-2">
-          Conocer mas
-        </button>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+    <!-- Navigation Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#inicio" class="nav-link text-gray-950 hover:text-primary-400 font-medium text-lg transition">Inicio</a>
+      <a href="#servicios" class="nav-link text-gray-950 hover:text-primary-400 font-medium text-lg transition">Servicios</a>
+      <a href="#funcionalidades" class="nav-link text-gray-950 hover:text-primary-400 font-medium transition text-lg">Funcionalidades</a>
+      <a href="#equipo" class="nav-link text-gray-950 hover:text-primary-400 font-medium transition text-lg"> Quienes Somos?</a>
+      <a href="#contacto" class="nav-link text-gray-950 hover:text-primary-400 font-medium transition text-lg">Contacto</a>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200">
-      <div class="flex flex-col space-y-4 pt-4">
-        <a href="#inicio" class="text-gray-700 hover:text-primary-600 font-medium">Inicio</a>
-        <a href="#servicios" class="text-gray-700 hover:text-primary-600 font-medium">Funcionalidades</a>
-        <a href="#servicios" class="text-gray-700 hover:text-primary-600 font-medium">Servicios</a>
-        <a href="#equipo" class="text-gray-700 hover:text-primary-600 font-medium">Nuestro Equipo</a>
-        <a href="#contacto" class="text-gray-700 hover:text-primary-600 font-medium">Contacto</a>
-        <button class="bg-gradient-to-r from-primary-500 to-medical-500 text-white px-6 py-2.5 rounded-full font-medium w-full">
-          Ver Demostración
-        </button>
-      </div>
+    <!-- CTA Button (Desktop) -->
+    <div class="hidden md:block">
+      <a href="#contacto" class="bg-gradient-to-r from-sky-500 to-sky-400 text-white px-10 py-3.5 rounded-full font-black shadow-xl hover:scale-125 transition">
+        Saber más
+      </a>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 focus:outline-none" aria-label="Abrir menú" aria-expanded="false">
+      <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+    <div class="flex flex-col space-y-4 p-6">
+      <a href="#inicio" class="text-gray-700 hover:text-primary-600 font-medium">Inicio</a>
+      <a href="#servicios" class="text-gray-700 hover:text-primary-600 font-medium">Servicios</a>
+      <a href="#funcionalidades" class="text-gray-700 hover:text-primary-600 font-medium">Funcionalidades</a>
+      <a href="#equipo" class="text-gray-700 hover:text-primary-600 font-medium">Quienes Somos?</a>
+      <a href="#contacto" class="text-gray-700 hover:text-primary-600 font-medium">Contacto</a>
+      <a href="#contacto" class="bg-gradient-to-r from-primary-500 to-medical-500 text-white px-6 py-2.5 rounded-full font-medium text-center shadow-md">
+        Ver Demostración
+      </a>
+    </div>
+    
+  </div>
 </header>
 
 <script>
-  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu?.classList.toggle('hidden');
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('hidden');
+    btn.setAttribute("aria-expanded", !isOpen);
+  });
+
+  // Cambiar fondo al hacer scroll
+  window.addEventListener("scroll", () => {
+    const header = document.getElementById("main-header");
+    if (window.scrollY > 50) {
+      header.classList.add("bg-white", "shadow-md");
+    } else {
+      header.classList.remove("bg-white", "shadow-md");
+    }
   });
 </script>
