@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import SystemInfo from '../components/SystemInfo.astro';
+import Team from '../components/Team.astro';
+import Benefits from '../components/Benefits.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Kenkomed - Sistema Clínico Moderno | Kinesiología y Psicología">
+  <Header />
+  <Hero />
+  <Services />
+  <SystemInfo />
+  <Team />
+  <Benefits />
+  <Contact />
+  <Footer />
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .section-animate.animate-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
