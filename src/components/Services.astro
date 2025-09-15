@@ -1,74 +1,284 @@
 ---
 const services = [
   {
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-           </svg>`,
-    title: "Gestión de Pacientes",
-    description: "Sistema completo para el manejo de historiales clínicos, citas y seguimiento de pacientes con interfaz intuitiva."
+    iconType: "iframe",
+    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
+    title: "Sistema de Soporte a la Decisión Clínica",
+    description: "Algoritmos Clinicos que asisten y ayudan a los profesionales en la toma de decisiones médicas basadas en datos y estándares clínicos.",
+    image: "https://clinicaesb.udd.cl/files/2020/09/kinesiologia-3-3-1920x1080.jpg",
+    features: ["Historiales digitales", "Seguimiento personalizado", "Interfaz intuitiva"],
+    color: "primary"
   },
   {
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4h3a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2h3z"></path>
-           </svg>`,
-    title: "Agenda Médica",
-    description: "Calendario inteligente con gestión de citas, recordatorios automáticos y sincronización en tiempo real."
+    iconType: "iframe",
+    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
+    title: "Cuestionarios Clinicos Semiautomatizados",
+    description: "Semiautomatizacion de cuestionarios clínicos para agilizar la recopilación de datos y mejorar la precisión en diagnósticos y tratamientos, parametrizadas por Sesiones",
+    image: "https://www.unitecoprofesional.es/blog/wp-content/uploads/2021/11/machine-learning-medicina-1024x577.jpg",
+    features: ["Bartel", "Proceso de anamnesis", "Escalas de dolor (PSFS, GROC, EVA, ENA), Entre otros"],
+    color: "primary"
   },
   {
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-           </svg>`,
+    iconType: "iframe",
+    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
     title: "Reportes Clínicos",
-    description: "Generación automática de informes, estadísticas de progreso y análisis de datos para mejores decisiones."
+    description: "Generación automática de informes, estadísticas de progreso y análisis de datos para mejores decisiones.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center",
+    features: ["Informes automáticos", "Estadísticas de progreso", "Análisis de datos"],
+    color: "primary"
   },
   {
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-           </svg>`,
+    iconType: "iframe",
+    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
     title: "Administración Segura",
-    description: "Gestión administrativa completa con facturación, inventarios y controles de acceso de máxima seguridad."
+    description: "Gestión administrativa completa con facturación, inventarios y controles de acceso de máxima seguridad.",
+    image: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=1920&h=1080&fit=crop&crop=center",
+    features: ["Facturación integrada", "Control de inventarios", "Máxima seguridad"],
+    color: "primary"
   }
 ];
 ---
 
-<section id="servicios" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16 section-animate">
+<section id="servicios" class="relative">
+  <!-- Header Section -->
+  <div class="bg-gradient-to-br from-gray-50 to-primary-50 py-20">
+    <div class="container mx-auto px-6 text-center">
       <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
         Nuestros <span class="text-primary-600">Servicios</span>
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Soluciones integrales diseñadas específicamente para clínicas de kinesiología y psicología, 
-        optimizando cada aspecto de tu práctica médica.
+        Soluciones integrales diseñadas específicamente para clínicas de kinesiología
       </p>
     </div>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {services.map((service, index) => (
-        <div class="group service-card section-animate bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
-             style={`animation-delay: ${index * 0.1}s;`}>
-          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-medical-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-            <Fragment set:html={service.icon} />
-          </div>
-          
-          <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-primary-600 transition-colors">
-            {service.title}
-          </h3>
-          
-          <p class="text-gray-600 leading-relaxed">
-            {service.description}
-          </p>
+  <!-- Carousel Section -->
+  <div class="relative h-screen overflow-hidden">
+    
+    <!-- Slides Container -->
+    <div class="carousel-container relative h-full">
+      <div class="carousel-track flex h-full transition-transform duration-1000 ease-in-out" id="carouselTrack">
+        {services.map((service, index) => (
+          <div class="carousel-slide min-w-full h-full relative flex items-center justify-center">
+            
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+              <img 
+                src={service.image} 
+                alt={service.title}
+                class="w-full h-full object-cover transform transition-transform duration-[10000ms] ease-out hover:scale-105"
+              />
+              <!-- Overlay Gradient -->
+              <div class={`absolute inset-0 bg-gradient-to-r ${service.color === 'primary' ? 'from-primary-900/70 via-primary-800/60 to-primary-600/50' : 'from-medical-900/70 via-medical-800/60 to-medical-600/50'}`}></div>
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
 
-          <div class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button class="text-primary-600 font-semibold flex items-center hover:text-primary-700">
-              Saber más
-              <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
+            <!-- Content Card -->
+            <div class="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+              
+              <!-- Left Content -->
+              <div class="text-white space-y-8 animate-slide-up">
+                
+                <!-- Icon Badge -->
+                <div class={`inline-flex p-4 rounded-2xl ${service.color === 'primary' ? 'bg-primary-500/20' : 'bg-medical-500/20'} backdrop-blur-sm border ${service.color === 'primary' ? 'border-primary-300/30' : 'border-medical-300/30'} rounded-full shadow-lg`}>
+                  <div class={`${service.color === 'primary' ? 'text-primary-300' : 'text-medical-300'}`}>
+                    {service.iconType === "iframe" ? (
+                      <iframe src={service.iconSrc} width="80" height="80" frameborder="0"></iframe>
+                    ) : (
+                      <Fragment set:html={service.icon} />
+                    )}
+                  </div>
+                </div>
+
+                <!-- Title -->
+                <div>
+                  <span class={`inline-block text-sm font-semibold uppercase tracking-wider ${service.color === 'primary' ? 'text-primary-300' : 'text-medical-300'} mb-3`}>
+                    Servicio {index + 1}
+                  </span>
+                  <h3 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <!-- Description -->
+                <p class="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-lg">
+                  {service.description}
+                </p>
+
+                <!-- Features List -->
+                <div class="space-y-4">
+                  {service.features.map(feature => (
+                    <div class="flex items-center space-x-4 text-lg">
+                      <div class={`w-2 h-2 rounded-full ${service.color === 'primary' ? 'bg-primary-400' : 'bg-medical-400'}`}></div>
+                      <span class="text-gray-100">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-4">
+                  <button class={`group px-8 py-4 ${service.color === 'primary' ? 'bg-primary-600 hover:bg-primary-700' : 'bg-medical-600 hover:bg-medical-700'} text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105`}>
+                    <span class="flex items-center">
+                      Explorar servicio
+                      <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Visual Element -->
+              <div class="hidden lg:flex items-center justify-center">
+                <div class={`relative p-8 rounded-3xl ${service.color === 'primary' ? 'bg-primary-500/10' : 'bg-medical-500/10'} backdrop-blur-xl border ${service.color === 'primary' ? 'border-primary-300/20' : 'border-medical-300/20'} shadow-2xl`}>
+                  <div class="text-center space-y-6">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  let currentSlide = 0;
+  let isAutoplay = true;
+  let autoplayInterval;
+  const totalSlides = 4;
+
+  function updateCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.progress-dot');
+    const slideNum = document.getElementById('currentSlideNum');
+    
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update progress dots
+    dots.forEach((dot, index) => {
+      dot.className = `progress-dot h-2 rounded-full transition-all duration-300 ${
+        index === currentSlide ? 'bg-white w-12' : 'bg-white/40 w-2 hover:bg-white/60'
+      }`;
+    });
+
+    // Update slide counter
+    slideNum.textContent = String(currentSlide + 1).padStart(2, '0');
+  }
+
+  function changeSlide(direction) {
+    currentSlide += direction;
+    
+    if (currentSlide >= totalSlides) {
+      currentSlide = 0;
+    } else if (currentSlide < 0) {
+      currentSlide = totalSlides - 1;
+    }
+    
+    updateCarousel();
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+  }
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+      changeSlide(1);
+    }, 6000);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    startAutoplay();
+    
+    // Pause on hover
+    const carousel = document.querySelector('.carousel-container');
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    // Touch support
+    let startX = 0;
+    let endX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].screenX;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          changeSlide(1);
+        } else {
+          changeSlide(-1);
+        }
+      }
+      
+      startAutoplay();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+  });
+</script>
+
+<style>
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  .carousel-slide {
+    background-attachment: fixed;
+  }
+
+  /* Parallax effect on scroll */
+  .carousel-slide img {
+    will-change: transform;
+  }
+
+  /* Smooth transitions */
+  .carousel-track {
+    will-change: transform;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .carousel-slide {
+      padding: 2rem 1rem;
+    }
+    
+    .carousel-slide h3 {
+      font-size: 2.5rem;
+    }
+    
+    .carousel-slide p {
+      font-size: 1.125rem;
+    }
+  }
+</style>
