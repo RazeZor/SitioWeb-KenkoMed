@@ -252,20 +252,20 @@ const equipoMiembros = [
   }
 
   .contenido-tarjeta {
-    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, .18);
     border-radius: 18px;
     padding: 1.4rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 
-                0 4px 12px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0 8px 32px #00000040, 0 4px 12px #ffffff1a inset;
     transition: var(--transicion-suave);
     height: 100%;
-    display: flex;
+    display: flex
+;
     flex-direction: column;
     position: relative;
     overflow: hidden;
-  }
+    background: rgb(0, 0, 0);
+    }
 
   .contenido-tarjeta::before {
     content: '';
@@ -285,12 +285,11 @@ const equipoMiembros = [
   }
 
   .tarjeta-miembro:hover .contenido-tarjeta {
-    background: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3),
-                0 8px 20px rgba(255, 255, 255, 0.15) inset;
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-
+    backdrop-filter: blur(86px);
+    box-shadow: 0 16px 40px #0000004d, 0 8px 20px #ffffff26 inset;
+    border-color: #ffffff4d;
+    background: currentColor;
+}
   .tarjeta-miembro:hover .contenido-tarjeta::before {
     transform: scaleX(1);
   }
