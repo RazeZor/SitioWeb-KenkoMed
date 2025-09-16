@@ -1,47 +1,49 @@
 ---
-const services = [
+const servicios = [
   {
-    iconType: "iframe",
-    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
-    title: "Sistema de Soporte a la Decisión Clínica",
-    description: "Algoritmos Clinicos que asisten y ayudan a los profesionales en la toma de decisiones médicas basadas en datos y estándares clínicos.",
-    image: "https://caensaclinicaltrials.com/wp-content/uploads/2020/11/medicina-basada-en-evidencia.jpg",
-    features: ["Historiales digitales", "Seguimiento personalizado", "Interfaz intuitiva"],
+    tipoIcono: "iframe",
+    srcIcono: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
+    titulo: "Sistema de Soporte a la Decisión Clínica",
+    descripcion: "Algoritmos Clinicos que asisten y ayudan a los profesionales en la toma de decisiones médicas basadas en datos y estándares clínicos.",
+    imagen: "https://caensaclinicaltrials.com/wp-content/uploads/2020/11/medicina-basada-en-evidencia.jpg",
+    caracteristicas: ["Historiales digitales", "Seguimiento personalizado", "Interfaz intuitiva"],
     color: "primary"
   },
   {
-    iconType: "iframe",
-    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
-    title: "Cuestionarios Clinicos",
-    description: "Semiautomatizacion de cuestionarios clínicos para agilizar la recopilación de datos y mejorar la precisión en diagnósticos y tratamientos, parametrizadas por sesiones",
-    image: "https://www.unitecoprofesional.es/blog/wp-content/uploads/2021/11/machine-learning-medicina-1024x577.jpg",
-    features: ["Bartel", "Proceso de anamnesis", "Escalas de dolor (PSFS, GROC, EVA, ENA), Entre otros"],
+    tipoIcono: "iframe",
+    srcIcono: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
+    titulo: "Cuestionarios Clinicos",
+    descripcion: "Semiautomatizacion de cuestionarios clínicos para agilizar la recopilación de datos y mejorar la precisión en diagnósticos y tratamientos, parametrizadas por sesiones",
+    imagen: "https://www.unitecoprofesional.es/blog/wp-content/uploads/2021/11/machine-learning-medicina-1024x577.jpg",
+    caracteristicas: ["Bartel", "Proceso de anamnesis", "Escalas de dolor (PSFS, GROC, EVA, ENA), Entre otros"],
     color: "primary"
   },
   {
-    iconType: "iframe",
-    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
-    title: "Reportes Clínicos",
-    description: "Generación automática de informes, estadísticas de progreso y análisis de datos para mejores decisiones.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center",
-    features: ["Informes automáticos", "Estadísticas de progreso", "Análisis de datos"],
+    tipoIcono: "iframe",
+    srcIcono: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
+    titulo: "Reportes Clínicos",
+    descripcion: "Generación automática de informes, estadísticas de progreso y análisis de datos para mejores decisiones.",
+    imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center",
+    caracteristicas: ["Informes automáticos", "Estadísticas de progreso", "Análisis de datos"],
     color: "primary"
   },
   {
-    iconType: "iframe",
-    iconSrc: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
-    title: "Administración Segura",
-    description: "Gestión administrativa completa con facturación, inventarios y controles de acceso de máxima seguridad.",
-    image: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=1920&h=1080&fit=crop&crop=center",
-    features: ["Facturación integrada", "Control de inventarios", "Máxima seguridad"],
+    tipoIcono: "iframe",
+    srcIcono: "https://lottie.host/embed/d262c03e-3440-4fc2-bb80-53cc348d6f88/ALsJWUYLLr.lottie",
+    titulo: "Administración Segura",
+    descripcion: "Gestión administrativa completa con facturación, inventarios y controles de acceso de máxima seguridad.",
+    imagen: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=1920&h=1080&fit=crop&crop=center",
+    caracteristicas: ["Facturación integrada", "Control de inventarios", "Máxima seguridad"],
     color: "primary"
   }
 ];
+
+const slidesInfinitos = [...servicios, ...servicios, ...servicios];
 ---
 
 <section id="servicios" class="relative">
   
-  <!-- Header Section -->
+  <!-- Sección de Encabezado -->
   <div class="bg-gradient-to-br from-gray-50 to-primary-50 py-16 sm:py-20">
     <div class="container mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
@@ -53,66 +55,69 @@ const services = [
     </div>
   </div>
 
+  <!-- Contenedor del Carrusel -->
   <div class="relative h-[80vh] sm:h-screen overflow-hidden">
-    <div class="carousel-container relative h-full">
-      <div class="carousel-track flex h-full transition-transform duration-1000 ease-in-out" id="carouselTrack">
-        {services.map((service, index) => (
-          <div class="carousel-slide min-w-full h-full relative flex items-center justify-center">
+    <div class="contenedor-carrusel relative h-full">
+      
+      <!-- Pista del carrusel con slides duplicados para efecto infinito -->
+      <div class="pista-carrusel flex h-full transition-transform duration-1000 ease-in-out" id="pistaCarrusel">
+        {slidesInfinitos.map((servicio, indice) => (
+          <div class="slide-carrusel min-w-full h-full relative flex items-center justify-center">
             
-            <!-- Background Image -->
+            <!-- Imagen de Fondo -->
             <div class="absolute inset-0 z-0">
               <img 
-                src={service.image} 
-                alt={service.title}
-                class="w-full h-full object-cover transform transition-transform duration-[10000ms] ease-out hover:scale-105"
+                src={servicio.imagen || "/placeholder.svg"} 
+                alt={servicio.titulo}
+                class="w-full h-full object-cover transform transition-transform duration-[8000ms] ease-out hover:scale-105"
               />
-              <!-- Overlay Gradient -->
-              <div class={`absolute inset-0 bg-gradient-to-r ${service.color === 'primary' ? 'from-primary-900/70 via-primary-800/60 to-primary-600/50' : 'from-medical-900/70 via-medical-800/60 to-medical-600/50'}`}></div>
-              <div class="absolute inset-0 bg-black/20"></div>
+              <!-- Superposición de Gradiente -->
+              <div class={`absolute inset-0 bg-gradient-to-r ${servicio.color === 'primary' ? 'from-primary-900/75 via-primary-800/65 to-primary-600/55' : 'from-medical-900/75 via-medical-800/65 to-medical-600/55'}`}></div>
+              <div class="absolute inset-0 bg-black/25"></div>
             </div>
 
-            <!-- Content Card -->
+            <!-- Tarjeta de Contenido -->
             <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center h-full">
               
-              <!-- Left Content -->
-              <div class="text-white space-y-6 sm:space-y-8 animate-slide-up">
+              <!-- Contenido Principal -->
+              <div class="text-white space-y-6 sm:space-y-8 animacion-deslizar-arriba">
                 
-                <!-- Icon Badge -->
-                <div class={`inline-flex p-3 sm:p-4 rounded-2xl ${service.color === 'primary' ? 'bg-primary-500/20' : 'bg-medical-500/20'} backdrop-blur-sm border ${service.color === 'primary' ? 'border-primary-300/30' : 'border-medical-300/30'} shadow-lg`}>
-                  <div class={`${service.color === 'primary' ? 'text-primary-300' : 'text-medical-300'}`}>
-                    {service.iconType === "iframe" ? (
-                      <iframe src={service.iconSrc} width="64" height="64" class="sm:w-20 sm:h-20" frameborder="0"></iframe>
+                <!-- Insignia de Icono -->
+                <div class={`inline-flex p-3 sm:p-4 rounded-2xl ${servicio.color === 'primary' ? 'bg-primary-500/25' : 'bg-medical-500/25'} backdrop-blur-sm border ${servicio.color === 'primary' ? 'border-primary-300/40' : 'border-medical-300/40'} shadow-xl`}>
+                  <div class={`${servicio.color === 'primary' ? 'text-primary-300' : 'text-medical-300'}`}>
+                    {servicio.tipoIcono === "iframe" ? (
+                      <iframe src={servicio.srcIcono} width="64" height="64" class="sm:w-20 sm:h-20" frameborder="0"></iframe>
                     ) : (
-                      <Fragment set:html={service.icon} />
+                      <Fragment set:html={servicio.icono} />
                     )}
                   </div>
                 </div>
 
-                <!-- Title -->
+                <!-- Título -->
                 <div>
-                  <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-                    {service.title}
+                  <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-balance">
+                    {servicio.titulo}
                   </h3>
                 </div>
 
-                <!-- Description -->
-                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg">
-                  {service.description}
+                <!-- Descripción -->
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg text-pretty">
+                  {servicio.descripcion}
                 </p>
 
-                <!-- Features List -->
+                <!-- Lista de Características -->
                 <div class="space-y-3 sm:space-y-4">
-                  {service.features.map(feature => (
+                  {servicio.caracteristicas.map(caracteristica => (
                     <div class="flex items-center space-x-3 sm:space-x-4 text-sm sm:text-base md:text-lg">
-                      <div class={`w-2 h-2 rounded-full ${service.color === 'primary' ? 'bg-primary-400' : 'bg-medical-400'}`}></div>
-                      <span class="text-gray-100">{feature}</span>
+                      <div class={`w-2 h-2 rounded-full ${servicio.color === 'primary' ? 'bg-primary-400' : 'bg-medical-400'} flex-shrink-0`}></div>
+                      <span class="text-gray-100">{caracteristica}</span>
                     </div>
                   ))}
                 </div>
 
-                <!-- CTA Button -->
+                <!-- Botón de Llamada a la Acción -->
                 <div class="pt-3 sm:pt-4">
-                  <button class={`group px-6 sm:px-8 py-3 sm:py-4 ${service.color === 'primary' ? 'bg-primary-600 hover:bg-primary-700' : 'bg-medical-600 hover:bg-medical-700'} text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105`}>
+                  <button class={`grupo px-6 sm:px-8 py-3 sm:py-4 ${servicio.color === 'primary' ? 'bg-primary-600 hover:bg-primary-700 focus:ring-primary-500' : 'bg-medical-600 hover:bg-medical-700 focus:ring-medical-500'} text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2`}>
                     <span class="flex items-center">
                       Explorar servicio
                       <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,23 +127,54 @@ const services = [
                   </button>
                 </div>
               </div>
-
-              <!-- Right Visual Element (hidden en móviles) -->
-
             </div>
-
           </div>
         ))}
+      </div>
+
+      <!-- Controles de navegación mejorados -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div class="flex items-center space-x-4 bg-black/30 backdrop-blur-sm rounded-full px-6 py-3">
+          <button id="botonAnterior" class="p-2 text-white hover:text-primary-300 transition-colors" aria-label="Slide anterior">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          
+          <div class="flex space-x-2" id="indicadoresPuntos">
+            {servicios.map((_, indice) => (
+              <button 
+                class="punto-progreso h-2 w-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"
+                data-slide={indice}
+                aria-label={`Ir al slide ${indice + 1}`}
+              ></button>
+            ))}
+          </div>
+          
+          <button id="botonSiguiente" class="p-2 text-white hover:text-primary-300 transition-colors" aria-label="Siguiente slide">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  @keyframes slide-up {
+  /* Variables CSS organizadas */
+  :root {
+    --duracion-transicion: 1000ms;
+    --duracion-autoplay: 5000ms;
+    --duracion-animacion-entrada: 800ms;
+  }
+
+  /* Animaciones mejoradas */
+  @keyframes deslizar-arriba {
     from {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -146,124 +182,228 @@ const services = [
     }
   }
 
-  .animate-slide-up {
-    animation: slide-up 0.8s ease-out;
+  .animacion-deslizar-arriba {
+    animation: deslizar-arriba var(--duracion-animacion-entrada) ease-out;
   }
 
-  .carousel-slide img {
+  /* Optimizaciones de rendimiento */
+  .slide-carrusel img {
     will-change: transform;
   }
 
-  .carousel-track {
+  .pista-carrusel {
     will-change: transform;
   }
 
-  /* Mobile optimizations */
+  /* Estilos responsivos mejorados */
   @media (max-width: 640px) {
-    .carousel-slide {
+    .slide-carrusel {
       padding: 1.5rem 1rem;
     }
     
-    .carousel-slide h3 {
-      font-size: 1.75rem; /* ~28px */
+    .slide-carrusel h3 {
+      font-size: 1.875rem;
+      line-height: 1.2;
     }
     
-    .carousel-slide p {
-      font-size: 1rem; /* 16px */
+    .slide-carrusel p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
+  }
+
+  /* Estados de puntos de progreso */
+  .punto-progreso.activo {
+    background-color: white;
+    width: 3rem;
   }
 </style>
 
-
-
 <script>
-  let currentSlide = 0;
-  let isAutoplay = true;
-  let autoplayInterval: string | number | NodeJS.Timeout | undefined;
-  const totalSlides = 4;
+  class CarruselInfinito {
+    private slideActual: number = 0;
+    private reproduccionAutomatica: boolean = true;
+    private intervaloAutoplay: NodeJS.Timeout | null = null;
+    private readonly totalSlides: number = 4;
+    private readonly totalSlidesConDuplicados: number = 12;
+    private readonly slideInicial: number = 4; // Empezar en el primer set duplicado
+    private estaTransicionando: boolean = false;
 
-  function updateCarousel() {
-    const track = document.getElementById('carouselTrack');
-    const dots = document.querySelectorAll('.progress-dot');
-    const slideNum = document.getElementById('currentSlideNum');
-    
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
-    // Update progress dots
-    dots.forEach((dot, index) => {
-      dot.className = `progress-dot h-2 rounded-full transition-all duration-300 ${
-        index === currentSlide ? 'bg-white w-12' : 'bg-white/40 w-2 hover:bg-white/60'
-      }`;
-    });
-
-    // Update slide counter
-    slideNum.textContent = String(currentSlide + 1).padStart(2, '0');
-  }
-
-  function changeSlide(direction: number) {
-    currentSlide += direction;
-    
-    if (currentSlide >= totalSlides) {
-      currentSlide = 0;
-    } else if (currentSlide < 0) {
-      currentSlide = totalSlides - 1;
+    constructor() {
+      this.slideActual = this.slideInicial;
+      this.inicializar();
     }
-    
-    updateCarousel();
-  }
 
-  function goToSlide(index: number) {
-    currentSlide = index;
-    updateCarousel();
-  }
+    private inicializar(): void {
+      this.configurarPosicionInicial();
+      this.configurarEventos();
+      this.iniciarReproduccionAutomatica();
+      this.actualizarCarrusel(false);
+    }
 
-  function startAutoplay() {
-    autoplayInterval = setInterval(() => {
-      changeSlide(1);
-    }, 6000);
-  }
+    private configurarPosicionInicial(): void {
+      const pista = document.getElementById('pistaCarrusel') as HTMLElement;
+      if (pista) {
+        pista.style.transform = `translateX(-${this.slideActual * 100}%)`;
+      }
+    }
 
-  function stopAutoplay() {
-    clearInterval(autoplayInterval);
-  }
+    private configurarEventos(): void {
+      const contenedor = document.querySelector('.contenedor-carrusel') as HTMLElement;
+      const botonAnterior = document.getElementById('botonAnterior');
+      const botonSiguiente = document.getElementById('botonSiguiente');
+      const puntos = document.querySelectorAll('.punto-progreso');
 
-  // Initialize
-  document.addEventListener('DOMContentLoaded', () => {
-    startAutoplay();
-    
-    // Pause on hover
-    const carousel = document.querySelector('.carousel-container');
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
+      // Eventos de botones
+      botonAnterior?.addEventListener('click', () => this.cambiarSlide(-1));
+      botonSiguiente?.addEventListener('click', () => this.cambiarSlide(1));
 
-    // Touch support
-    let startX = 0;
-    let endX = 0;
+      // Eventos de puntos indicadores
+      puntos.forEach((punto, indice) => {
+        punto.addEventListener('click', () => this.irASlide(indice));
+      });
 
-    carousel.addEventListener('touchstart', (e) => {
-      startX = e.changedTouches[0].screenX;
-      stopAutoplay();
-    });
+      // Pausar en hover
+      contenedor?.addEventListener('mouseenter', () => this.pausarReproduccionAutomatica());
+      contenedor?.addEventListener('mouseleave', () => this.iniciarReproduccionAutomatica());
 
-    carousel.addEventListener('touchend', (e) => {
-      endX = e.changedTouches[0].screenX;
-      const diff = startX - endX;
+      // Soporte táctil mejorado
+      this.configurarEventosTactiles(contenedor);
+
+      // Navegación por teclado
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') this.cambiarSlide(-1);
+        if (e.key === 'ArrowRight') this.cambiarSlide(1);
+      });
+    }
+
+    private configurarEventosTactiles(contenedor: HTMLElement): void {
+      let inicioX = 0;
+      let finX = 0;
+      let inicioY = 0;
+      let finY = 0;
+
+      contenedor?.addEventListener('touchstart', (e) => {
+        inicioX = e.changedTouches[0].screenX;
+        inicioY = e.changedTouches[0].screenY;
+        this.pausarReproduccionAutomatica();
+      });
+
+      contenedor?.addEventListener('touchend', (e) => {
+        finX = e.changedTouches[0].screenX;
+        finY = e.changedTouches[0].screenY;
+        
+        const diferenciaX = inicioX - finX;
+        const diferenciaY = Math.abs(inicioY - finY);
+        
+        // Solo procesar si es un deslizamiento horizontal
+        if (Math.abs(diferenciaX) > 50 && diferenciaY < 100) {
+          if (diferenciaX > 0) {
+            this.cambiarSlide(1);
+          } else {
+            this.cambiarSlide(-1);
+          }
+        }
+        
+        this.iniciarReproduccionAutomatica();
+      });
+    }
+
+    private cambiarSlide(direccion: number): void {
+      if (this.estaTransicionando) return;
       
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          changeSlide(1);
-        } else {
-          changeSlide(-1);
+      this.estaTransicionando = true;
+      this.slideActual += direccion;
+      
+      this.actualizarCarrusel(true);
+      
+      // Manejar bucle infinito
+      setTimeout(() => {
+        this.manejarBucleInfinito();
+        this.estaTransicionando = false;
+      }, 1000);
+    }
+
+    private irASlide(indice: number): void {
+      if (this.estaTransicionando) return;
+      
+      this.slideActual = this.slideInicial + indice;
+      this.actualizarCarrusel(true);
+    }
+
+    private manejarBucleInfinito(): void {
+      const pista = document.getElementById('pistaCarrusel') as HTMLElement;
+      
+      if (this.slideActual >= this.totalSlidesConDuplicados - this.totalSlides) {
+        // Saltar al inicio sin animación
+        this.slideActual = this.slideInicial;
+        pista.style.transition = 'none';
+        pista.style.transform = `translateX(-${this.slideActual * 100}%)`;
+        
+        // Restaurar transición
+        setTimeout(() => {
+          pista.style.transition = 'transform var(--duracion-transicion) ease-in-out';
+        }, 50);
+      } else if (this.slideActual < this.slideInicial) {
+        // Saltar al final sin animación
+        this.slideActual = this.slideInicial + this.totalSlides - 1;
+        pista.style.transition = 'none';
+        pista.style.transform = `translateX(-${this.slideActual * 100}%)`;
+        
+        // Restaurar transición
+        setTimeout(() => {
+          pista.style.transition = 'transform var(--duracion-transicion) ease-in-out';
+        }, 50);
+      }
+    }
+
+    private actualizarCarrusel(conAnimacion: boolean = true): void {
+      const pista = document.getElementById('pistaCarrusel') as HTMLElement;
+      const puntos = document.querySelectorAll('.punto-progreso');
+      
+      if (pista) {
+        if (!conAnimacion) {
+          pista.style.transition = 'none';
+        }
+        pista.style.transform = `translateX(-${this.slideActual * 100}%)`;
+        
+        if (!conAnimacion) {
+          setTimeout(() => {
+            pista.style.transition = 'transform var(--duracion-transicion) ease-in-out';
+          }, 50);
         }
       }
       
-      startAutoplay();
-    });
+      // Actualizar indicadores
+      const indiceActual = (this.slideActual - this.slideInicial) % this.totalSlides;
+      puntos.forEach((punto, indice) => {
+        if (indice === indiceActual) {
+          punto.classList.add('activo');
+        } else {
+          punto.classList.remove('activo');
+        }
+      });
+    }
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') changeSlide(-1);
-      if (e.key === 'ArrowRight') changeSlide(1);
-    });
+    private iniciarReproduccionAutomatica(): void {
+      if (this.intervaloAutoplay) {
+        clearInterval(this.intervaloAutoplay);
+      }
+      
+      this.intervaloAutoplay = setInterval(() => {
+        this.cambiarSlide(1);
+      }, 5000);
+    }
+
+    private pausarReproduccionAutomatica(): void {
+      if (this.intervaloAutoplay) {
+        clearInterval(this.intervaloAutoplay);
+        this.intervaloAutoplay = null;
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    new CarruselInfinito();
   });
 </script>
