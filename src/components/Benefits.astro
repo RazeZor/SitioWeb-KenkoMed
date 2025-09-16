@@ -2,40 +2,97 @@
 const benefits = [
   {
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-2.21-1.79-4-4-4S4 8.79 4 11v1a4 4 0 008 0v-1zM16 7h6M19 4v6"></path>
            </svg>`,
-    title: "Seguridad de Datos",
-    description: "Protección avanzada con encriptación de extremo a extremo y copias de seguridad automáticas."
+    title: "Ingreso de Pacientes Simplificado",
+    description: "Registra a cada paciente de forma rápida y personalizada según su área de atención. Ahorra tiempo en recepción y evita errores administrativos.",
+    bgImage: "/placeholder.svg"
   },
   {
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2h6v2H9zm0-4v-2h10v2H9zm0-4V7h14v2H9zM5 7h.01M5 11h.01M5 15h.01"></path>
            </svg>`,
-    title: "Soporte 24/7",
-    description: "Equipo técnico disponible las 24 horas para resolver cualquier consulta o incidencia."
+    title: "Informes Automáticos DSS",
+    description: "Obtén reportes claros y completos con datos procesados por el sistema de soporte clínico. Toma decisiones respaldadas en información real.",
+    bgImage: "/placeholder.svg"
   },
   {
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 11V7a4 4 0 018 0v4h-8zM7 11a4 4 0 00-8 0v4h8v-4zm2 6h12a2 2 0 012 2v3H7v-3a2 2 0 012-2z"></path>
            </svg>`,
-    title: "Optimización de Tiempo",
-    description: "Automatización de procesos rutinarios para que dediques más tiempo a tus pacientes."
+    title: "Visualización con Gráficos",
+    description: "Analiza tendencias de pacientes, atenciones y resultados en gráficos dinámicos que simplifican la interpretación de datos complejos.",
+    bgImage: "/placeholder.svg"
   },
   {
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15l-3-3m0 0l-3 3m3-3V4m6 8l3 3m0 0l3-3m-3 3V4"></path>
            </svg>`,
-    title: "Control Administrativo",
-    description: "Panel de control completo con métricas, reportes financieros y análisis de rendimiento."
+    title: "Gestión de Roles y Accesos",
+    description: "Define fácilmente qué puede ver y hacer cada profesional. Mantén seguridad y organización sin complicaciones.",
+    bgImage: "/placeholder.svg"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14V9a6 6 0 10-12 0v5c0 .217-.086.426-.24.58L4 17h5m6 0v1a3 3 0 11-6 0v-1h6z"></path>
+           </svg>`,
+    title: "Listado Inteligente de Pacientes",
+    description: "Accede en segundos al historial y estado de cada paciente. Toda la información que necesitas, organizada y siempre disponible.",
+    bgImage: "/placeholder.svg"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m6 4H3m6-2v2m6 4H3m6-2v2m6 4H3m6-2v2"></path>
+           </svg>`,
+    title: "Atención 24/5",
+    description: "Nuestro equipo de soporte está disponible para ayudarte en cualquier momento, asegurando que tu sistema funcione sin interrupciones.",
+    bgImage: "/placeholder.svg"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-6-8h6M5 7h.01M5 11h.01M5 15h.01"></path>
+           </svg>`,
+    title: "Semi-automatización de Cuestionarios Clínicos",
+    description: "Crea y asigna cuestionarios clínicos y métricas a cada paciente, permitiendo una recopilación de datos eficiente y precisa según cada área.",
+    bgImage: "/placeholder.svg"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M12 11c1.657 0 3-1.343 3-3V5a3 3 0 10-6 0v3c0 1.657 1.343 3 3 3z" />
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M5 11h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2z" />
+</svg>
+`,
+    title: "Seguridad y Respaldo de Datos",
+    description: "Protege la información de tus pacientes con encriptación avanzada y copias de seguridad automáticas. Cumple con las normativas de privacidad y seguridad.",
+    bgImage: "/placeholder.svg"
   }
 ];
 ---
 
-<section class="py-20 bg-white">
-  <div class="container mx-auto px-6">
+
+
+
+<section class="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+  <!-- Adding animated background elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
     <div class="text-center mb-16 section-animate">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-        ¿Por Qué Elegir <span class="text-primary-600">Kenkomed</span>?
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-balance">
+        ¿Por Qué Elegir <span class="text-primary-600 relative">
+          Kenkomed
+          <!-- Adding decorative underline -->
+          <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 to-sky-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+        </span>?
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
         Más de 500 clínicas confían en nuestro sistema para optimizar sus operaciones 
@@ -43,89 +100,176 @@ const benefits = [
       </p>
     </div>
 
+    <!-- Enhanced benefit cards with images and better interactions -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
       {benefits.map((benefit, index) => (
-        <div class="group benefit-card section-animate text-center"
+        <div class="group benefit-card section-animate relative overflow-hidden"
              style={`animation-delay: ${index * 0.1}s;`}>
-          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-medical-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-lg">
-            <Fragment set:html={benefit.icon} />
+          
+          <!-- Background image with overlay -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+            <img src={benefit.bgImage || "/placeholder.svg"} alt="" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-600/80 to-transparent"></div>
           </div>
           
-          <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-primary-600 transition-colors">
-            {benefit.title}
-          </h3>
-          
-          <p class="text-gray-600 leading-relaxed">
-            {benefit.description}
-          </p>
+          <!-- Card content -->
+          <div class="relative z-10 bg-white/90 backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-100 group-hover:border-primary-200 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary-500/20 group-hover:-translate-y-2">
+            
+            <!-- Interactive icon with pulse effect -->
+            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-sky-300 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 relative overflow-hidden group-hover:scale-110 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary-500/50">
+              <div class="absolute inset-0 bg-white/20 rounded-2xl transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+              <div class="relative z-10 transform group-hover:rotate-12 transition-transform duration-500">
+                <Fragment set:html={benefit.icon} />
+              </div>
+              <!-- Pulse rings -->
+              <div class="absolute inset-0 rounded-2xl border-2 border-white/30 animate-ping opacity-0 group-hover:opacity-100"></div>
+              <div class="absolute inset-0 rounded-2xl border-2 border-white/20 animate-ping opacity-0 group-hover:opacity-100" style="animation-delay: 0.5s;"></div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-primary-600 transition-colors duration-300 text-center">
+              {benefit.title}
+            </h3>
+            
+            <p class="text-gray-600 leading-relaxed text-center group-hover:text-gray-700 transition-colors duration-300">
+              {benefit.description}
+            </p>
+
+            <!-- Decorative corner accent -->
+            <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary-400/20 to-transparent rounded-bl-2xl transform translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
+          </div>
         </div>
       ))}
     </div>
 
-    <!-- Stats Section -->
-    <div class="section-animate">
-      <div class="bg-gradient-to-r from-primary-600 to-medical-600 rounded-3xl p-12 text-white text-center">
-        <h3 class="text-3xl font-bold mb-8">Nuestros Números Hablan</h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="stats-item">
-            <div class="text-4xl font-bold mb-2 counter" data-target="500">0</div>
-            <div class="text-blue-100">Clínicas Activas</div>
-          </div>
-          
-          <div class="stats-item">
-            <div class="text-4xl font-bold mb-2 counter" data-target="15000">0</div>
-            <div class="text-blue-100">Pacientes Registrados</div>
-          </div>
-          
-          <div class="stats-item">
-            <div class="text-4xl font-bold mb-2 counter" data-target="98">0</div>
-            <div class="text-blue-100">% Satisfacción</div>
-          </div>
-          
-          <div class="stats-item">
-            <div class="text-4xl font-bold mb-2 counter" data-target="24">0</div>
-            <div class="text-blue-100">Horas de Soporte</div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
+<style>
+  /* Adding enhanced animations and visual effects */
+  .floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .shape-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 10%;
+    animation-delay: -2s;
+  }
+
+  .shape-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -4s;
+  }
+
+  .shape-4 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 30%;
+    animation-delay: -1s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .benefit-card {
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .stats-item {
+    position: relative;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .stats-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+</style>
+
 <script>
-  // Counter animation
+
   function animateCounters() {
     const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
+    counters.forEach((counter, index) => {
       const target = parseInt(counter.getAttribute('data-target'));
       const duration = 2000;
-      const step = target / (duration / 16);
-      let current = 0;
+      const startTime = performance.now();
       
-      const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        counter.textContent = Math.floor(current).toLocaleString();
-      }, 16);
-    });
-  }
-
-  // Trigger animation when in view
-  const statsSection = document.querySelector('.stats-item');
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounters();
-        statsObserver.unobserve(entry.target);
+      function easeOutQuart(t) {
+        return 1 - Math.pow(1 - t, 4);
       }
+      
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        const current = Math.floor(easedProgress * target);
+        
+        counter.textContent = current.toLocaleString();
+        
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        }
+      }
+      
+      // Stagger the animation start
+      setTimeout(() => {
+        requestAnimationFrame(updateCounter);
+      }, index * 200);
     });
-  });
-
-  if (statsSection) {
-    statsObserver.observe(statsSection);
   }
+
 </script>
