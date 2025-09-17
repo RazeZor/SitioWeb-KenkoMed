@@ -252,7 +252,7 @@ const equipoMiembros = [
   }
 
   .contenido-tarjeta {
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, .18);
     border-radius: 18px;
     padding: 1.4rem;
@@ -264,8 +264,8 @@ const equipoMiembros = [
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    background: rgb(0, 0, 0);
-    }
+    background: #000000ad;
+}
 
   .contenido-tarjeta::before {
     content: '';
@@ -285,10 +285,10 @@ const equipoMiembros = [
   }
 
   .tarjeta-miembro:hover .contenido-tarjeta {
-    backdrop-filter: blur(86px);
+    backdrop-filter: blur(10px) ;
     box-shadow: 0 16px 40px #0000004d, 0 8px 20px #ffffff26 inset;
     border-color: #ffffff4d;
-    background: currentColor;
+    background: rgb(17 24 39 / 86%);
 }
   .tarjeta-miembro:hover .contenido-tarjeta::before {
     transform: scaleX(1);
