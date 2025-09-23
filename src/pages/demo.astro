@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Datos estáticos para las estrellas de los testimonios
+const stars = Array(5).fill(null);
+---
+
+<Layout title="Demo Interactiva - Kenkomed DSS | Sistema Clínico Moderno">
+  <div class="min-h-screen bg-gradient-to-br from-sky-950 via-primary-900 to-primary-800 text-white overflow-x-hidden">
+
+    
+    <!-- Banner de Demo -->
+    <div class="bg-gradient-to-r from-primary-700 to-sky-800 text-center py-3 px-4 text-sm sticky top-0 z-50">
+      <div class="flex items-center justify-center gap-2">
+        <span class="bg-white/20 px-2 py-1 rounded text-white">DEMO</span>
+        Estás viendo una demostración de Kenkomed
+        <a href="/" class="text-white hover:text-sky-200 underline">Volver al sitio principal</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="relative px-6 py-20 overflow-hidden">
+        <!-- Background Grid -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 50px 50px;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <!-- Left Content -->
+          <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 bg-sky-800/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+              <span class="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></span>
+              Demo Interactiva Disponible
+            </div>
+
+            <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+              Experimenta el
+              <span class="bg-gradient-to-r from-sky-300 to-primary-300 bg-clip-text text-transparent">
+                futuro médico
+              </span>
+              en tiempo real
+            </h1>
+
+            <p class="text-xl text-sky-100 leading-relaxed max-w-lg">
+              Descubre cómo Kenkomed revoluciona la toma de decisiones clínicas con IA avanzada, 
+              análisis predictivo y herramientas intuitivas diseñadas para profesionales de la salud.
+            </p>
+
+
+          </div>
+
+          <!-- Right Content - Interactive Dashboard Preview -->
+          <div class="relative">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-2xl">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-lg font-semibold">Panel de Control - Demo</h3>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span class="text-sm text-sky-200">En vivo</span>
+                </div>
+              </div>
+
+              <!-- Demo Stats -->
+              <div class="space-y-4">
+                <div class="bg-white/5 rounded-xl p-4">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm">Pacientes Activos</span>
+                    <span class="text-sky-300">↑ 24%</span>
+                  </div>
+                  <div class="h-32 flex items-end gap-2">
+                    {[60, 80, 45, 90, 70, 55].map((height) => (
+                      <div class="bg-gradient-to-t from-sky-500 to-sky-300 rounded-t w-full" style={`height: ${height}%`}></div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Floating Notifications -->
+            <div class="absolute -top-4 -right-4 bg-sky-400/20 backdrop-blur-sm rounded-lg p-3 animate-float">
+              <div class="text-xs">Nuevo Diagnóstico</div>
+              <div class="text-sm font-semibold">Análisis Completado</div>
+            </div>
+            
+            <div class="absolute -bottom-4 -left-4 bg-primary-400/20 backdrop-blur-sm rounded-lg p-3 animate-float-delayed">
+              <div class="text-xs">Alerta Temprana</div>
+              <div class="text-sm font-semibold">Revisión Sugerida</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="px-6 py-20 bg-black/20">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-12">
+            Funcionalidades
+            <span class="bg-gradient-to-r from-sky-300 to-primary-300 bg-clip-text text-transparent">
+              Principales
+            </span>
+          </h2>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "IA Predictiva",
+                description: "Análisis avanzado de datos clínicos para predicciones precisas",
+                icon: "🧠"
+              },
+              {
+                title: "Gestión de Pacientes",
+                description: "Sistema integral de seguimiento y gestión de historiales",
+                icon: "👥"
+              },
+              {
+                title: "Reportes Automáticos",
+                description: "Generación automática de informes y estadísticas",
+                icon: "📊"
+              }
+            ].map(feature => (
+              <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-sky-300/30 transition-all duration-300">
+                <div class="text-3xl mb-4">{feature.icon}</div>
+                <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p class="text-sky-200">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Demo Section -->
+      <section id="demo-video" class="px-6 py-20 bg-black/20 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 bg-sky-800/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-8">
+            <svg class="w-4 h-4 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Demo en Video
+          </div>
+
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+            Ve Kenkomed en
+            <span class="bg-gradient-to-r from-sky-300 to-primary-300 bg-clip-text text-transparent">
+              acción
+            </span>
+          </h2>
+
+          <p class="text-xl text-sky-100 mb-12 max-w-3xl mx-auto">
+            Descubre cómo nuestro sistema DSS transforma la práctica clínica diaria 
+            con herramientas inteligentes y análisis predictivo avanzado.
+          </p>
+
+          <!-- Video Container -->
+          <div class="relative max-w-4xl mx-auto">
+            <div class="aspect-video bg-gradient-to-br from-sky-900/50 to-primary-900/50 rounded-2xl border border-white/20 overflow-hidden shadow-2xl">
+              <!-- Video Placeholder with Play Button -->
+              <div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-sky-800/30 to-primary-800/30">
+                <button id="play-video" class="group relative">
+                  <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-primary-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <div class="absolute inset-0 bg-white/20 rounded-full animate-ping"></div>
+                </button>
+                
+                <!-- Video Info Overlay -->
+                <div class="absolute bottom-6 left-6 bg-black/50 backdrop-blur-sm rounded-lg p-4">
+                  <div class="text-sm font-medium">Demo Completa de Kenkomed</div>
+                  <div class="text-xs text-sky-200">Duración: 3:45 minutos</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Features -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                </div>
+                <h3 class="font-semibold mb-2">Dashboard Inteligente</h3>
+                <p class="text-sm text-sky-200">Visualización en tiempo real de datos clínicos</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <h3 class="font-semibold mb-2">IA Predictiva</h3>
+                <p class="text-sm text-sky-200">Análisis avanzado para decisiones informadas</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+                  </svg>
+                </div>
+                <h3 class="font-semibold mb-2">Flujo Optimizado</h3>
+                <p class="text-sm text-sky-200">Procesos clínicos simplificados y eficientes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 4s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+</style>
+
+<script>
+  // Animación suave para los números
+  function animateValue(element: HTMLElement, start: number, end: number, duration: number) {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const current = Math.floor(progress * (end - start) + start);
+      element.textContent = current + (end === 500 ? '+' : '%');
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  // Iniciar animaciones cuando los elementos son visibles
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+        const value = parseInt(entry.target.dataset.value || "0");
+        animateValue(entry.target, 0, value, 2000);
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  // Observar elementos con valores para animar
+  document.querySelectorAll('[data-value]').forEach((el) => {
+    observer.observe(el);
+  });
+
+  // Video Modal Functionality
+  function initVideoModal() {
+    const playButton = document.getElementById('play-video');
+    if (!playButton) return;
+    
+    playButton.addEventListener('click', () => {
+      // Create modal
+      const modal = document.createElement('div');
+      modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+      modal.innerHTML = `
+        <div class="relative max-w-4xl w-full">
+          <button class="absolute -top-12 right-0 text-white hover:text-sky-300 transition-colors">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          <div class="aspect-video bg-black rounded-xl overflow-hidden">
+            <iframe 
+              src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+              class="w-full h-full" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      // Close modal
+      const closeModal = () => {
+        document.body.removeChild(modal);
+      };
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || (e.target as Element).closest('button')) {
+          closeModal();
+        }
+      });
+
+      // Close on ESC key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      }, { once: true });
+    });
+  }
+
+  // Initialize video functionality
+  initVideoModal();
+</script>
