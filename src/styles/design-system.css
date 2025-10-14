@@ -1,49 +1,49 @@
 /* 
   KenkoMed Design System
-  Modern, professional color palette based on color theory
-  Primary: Deep Blue (trust, healthcare)
-  Accent 1: Teal (modern, technology)
-  Accent 2: Emerald (health, growth)
+  Color palette based on the KenkoMed logo
+  Primary: Blue (#1B75BC) - represents trust, healthcare, professionalism
+  Accent: Teal (#2D9B8E) - represents wellness, balance, vitality
+  Using color theory for harmonious palette
 */
 
 :root {
-  /* Primary Brand Colors - Deep Blue */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #2563eb;
-  --color-primary-600: #1d4ed8;
-  --color-primary-700: #1e40af;
-  --color-primary-800: #1e3a8a;
-  --color-primary-900: #1e293b;
+  /* Updated Primary Brand Colors to match logo blue #1B75BC */
+  --color-primary-50: #e8f4fb;
+  --color-primary-100: #d1e9f7;
+  --color-primary-200: #a3d3ef;
+  --color-primary-300: #75bde7;
+  --color-primary-400: #47a7df;
+  --color-primary-500: #1b75bc; /* Logo blue */
+  --color-primary-600: #165e96;
+  --color-primary-700: #114771;
+  --color-primary-800: #0c304b;
+  --color-primary-900: #071826;
 
-  /* Accent 1 - Teal (Technology, Modern) */
-  --color-teal-50: #f0fdfa;
-  --color-teal-100: #ccfbf1;
-  --color-teal-200: #99f6e4;
-  --color-teal-300: #5eead4;
-  --color-teal-400: #2dd4bf;
-  --color-teal-500: #14b8a6;
-  --color-teal-600: #0d9488;
-  --color-teal-700: #0f766e;
-  --color-teal-800: #115e59;
-  --color-teal-900: #134e4a;
+  /* Updated Accent Colors to match logo teal #2D9B8E */
+  --color-teal-50: #e9f7f5;
+  --color-teal-100: #d3efeb;
+  --color-teal-200: #a7dfd7;
+  --color-teal-300: #7bcfc3;
+  --color-teal-400: #4fbfaf;
+  --color-teal-500: #2d9b8e; /* Logo teal */
+  --color-teal-600: #247c72;
+  --color-teal-700: #1b5d55;
+  --color-teal-800: #123e39;
+  --color-teal-900: #091f1c;
 
-  /* Accent 2 - Emerald (Health, Growth) */
-  --color-emerald-50: #ecfdf5;
-  --color-emerald-100: #d1fae5;
-  --color-emerald-200: #a7f3d0;
-  --color-emerald-300: #6ee7b7;
-  --color-emerald-400: #34d399;
-  --color-emerald-500: #10b981;
-  --color-emerald-600: #059669;
-  --color-emerald-700: #047857;
-  --color-emerald-800: #065f46;
-  --color-emerald-900: #064e3b;
+  /* Added complementary accent color for visual interest */
+  --color-accent-50: #f0f9ff;
+  --color-accent-100: #e0f2fe;
+  --color-accent-200: #bae6fd;
+  --color-accent-300: #7dd3fc;
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9;
+  --color-accent-600: #0284c7;
+  --color-accent-700: #0369a1;
+  --color-accent-800: #075985;
+  --color-accent-900: #0c4a6e;
 
-  /* Neutrals - Slate */
+  /* Neutrals - Clean grays for professional look */
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   --color-slate-200: #e2e8f0;
@@ -55,44 +55,64 @@
   --color-slate-800: #1e293b;
   --color-slate-900: #0f172a;
 
-  /* Semantic Colors */
-  --color-success: var(--color-emerald-500);
+  /* Updated semantic colors to use logo palette */
+  --color-success: #2d9b8e; /* Using logo teal for success */
   --color-warning: #f59e0b;
   --color-error: #ef4444;
-  --color-info: var(--color-teal-500);
+  --color-info: #1b75bc; /* Using logo blue for info */
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--color-teal-500) 0%, var(--color-emerald-500) 100%);
-  --gradient-hero: linear-gradient(
-    135deg,
-    var(--color-slate-900) 0%,
-    var(--color-primary-900) 50%,
-    var(--color-slate-900) 100%
-  );
+  /* Updated gradients to use logo colors */
+  --gradient-primary: linear-gradient(135deg, #1b75bc 0%, #2d9b8e 100%);
+  --gradient-accent: linear-gradient(135deg, #2d9b8e 0%, #1b75bc 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(27, 117, 188, 0.95) 0%, rgba(45, 155, 142, 0.85) 100%);
+  --gradient-overlay: linear-gradient(to bottom, rgba(27, 117, 188, 0.1) 0%, rgba(45, 155, 142, 0.05) 100%);
 }
 
-/* Tailwind Custom Classes */
+/* Updated Tailwind custom classes to use new logo colors */
 .text-primary {
-  color: var(--color-primary-600);
+  color: var(--color-primary-500);
 }
 .bg-primary {
-  background-color: var(--color-primary-600);
+  background-color: var(--color-primary-500);
 }
 .border-primary {
-  border-color: var(--color-primary-600);
+  border-color: var(--color-primary-500);
 }
 
 .text-teal {
-  color: var(--color-teal-600);
+  color: var(--color-teal-500);
 }
 .bg-teal {
-  background-color: var(--color-teal-600);
+  background-color: var(--color-teal-500);
 }
 
-.text-emerald {
-  color: var(--color-emerald-600);
+.text-accent {
+  color: var(--color-accent-500);
 }
-.bg-emerald {
-  background-color: var(--color-emerald-600);
+.bg-accent {
+  background-color: var(--color-accent-500);
+}
+
+/* Added gradient utility classes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+/* Added hover states for interactive elements */
+.hover-primary:hover {
+  background-color: var(--color-primary-600);
+  transition: background-color 0.3s ease;
+}
+
+.hover-teal:hover {
+  background-color: var(--color-teal-600);
+  transition: background-color 0.3s ease;
 }
