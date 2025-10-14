@@ -47,7 +47,7 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
   <div class="bg-gradient-to-br from-slate-50 to-slate-100 py-16 sm:py-20">
     <div class="container mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6">
-        Nuestros <span class="text-blue-600">Servicios</span>
+        Nuestros <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Servicios</span>
       </h2>
       <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
         Soluciones integrales diseñadas específicamente para clínicas de kinesiología
@@ -75,7 +75,7 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
               <div class={`absolute inset-0 ${
                 servicio.color === 'blue' ? 'bg-gradient-to-r from-blue-900/75 via-blue-800/65 to-blue-700/55' :
                 servicio.color === 'teal' ? 'bg-gradient-to-r from-teal-900/75 via-teal-800/65 to-teal-700/55' :
-                'bg-gradient-to-r from-emerald-900/75 via-emerald-800/65 to-emerald-700/55'
+                'bg-gradient-to-r from-teal-900/75 via-blue-800/65 to-blue-700/55'
               }`}></div>
               <div class="absolute inset-0 bg-slate-950/25"></div>
             </div>
@@ -90,12 +90,12 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
                 <div class={`inline-flex p-3 sm:p-4 rounded-2xl ${
                   servicio.color === 'blue' ? 'bg-blue-500/25 border-blue-300/40' :
                   servicio.color === 'teal' ? 'bg-teal-500/25 border-teal-300/40' :
-                  'bg-emerald-500/25 border-emerald-300/40'
+                  'bg-teal-500/25 border-teal-300/40'
                 } backdrop-blur-sm border shadow-xl`}>
                   <div class={`${
                     servicio.color === 'blue' ? 'text-blue-300' :
                     servicio.color === 'teal' ? 'text-teal-300' :
-                    'text-emerald-300'
+                    'text-teal-300'
                   }`}>
                     {servicio.tipoIcono === "iframe" ? (
                       <iframe src={servicio.srcIcono} width="64" height="64" class="sm:w-20 sm:h-20" frameborder="0"></iframe>
@@ -124,7 +124,7 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
                       <div class={`w-2 h-2 rounded-full ${
                         servicio.color === 'blue' ? 'bg-blue-400' :
                         servicio.color === 'teal' ? 'bg-teal-400' :
-                        'bg-emerald-400'
+                        'bg-teal-400'
                       } flex-shrink-0`}></div>
                       <span class="text-slate-100">{caracteristica}</span>
                     </div>
@@ -136,7 +136,7 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
                   <button class={`grupo px-6 sm:px-8 py-3 sm:py-4 ${
                     servicio.color === 'blue' ? 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500' :
                     servicio.color === 'teal' ? 'bg-teal-600 hover:bg-teal-700 focus:ring-teal-500' :
-                    'bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500'
+                    'bg-teal-600 hover:bg-teal-700 focus:ring-teal-500'
                   } text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2`}>
                     <span class="flex items-center">
                       Explorar servicio
