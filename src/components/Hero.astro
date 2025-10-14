@@ -92,7 +92,7 @@
 
       <!-- Right Column - Mockup 3D -->
       <div class="relative lg:block animate-fade-in-up" style="animation-delay: 0.2s;">
-        <div class="mockup-container animate-float">
+        <div class="mockup-container animate-subtle-float">
           
           <!-- Updated glow effects with logo colors -->
           <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-teal-600/20 rounded-3xl blur-3xl"></div>
@@ -212,8 +212,8 @@
     transform: translateZ(20px) scale(1.02);
   }
 
-  /* Reduced float distance even more for subtle movement */
-  @keyframes float {
+  /* Animation for subtle floating effect */
+  @keyframes subtle-float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
   }
@@ -230,8 +230,8 @@
   }
 
   /* Slower float animation for very calm effect */
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  .animate-subtle-float {
+    animation: subtle-float 6s ease-in-out infinite;
   }
 
   .animate-fade-in-up {
