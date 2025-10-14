@@ -202,20 +202,20 @@
     transform-style: preserve-3d;
   }
 
-  /* Reduced rotation angles for calmer animation */
+  /* Removed all rotation transforms for static, clean look */
   .mockup-screen {
-    transform: rotateY(-8deg) rotateX(2deg);
+    transform: translateZ(0);
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .mockup-screen:hover {
-    transform: rotateY(-5deg) rotateX(1deg) translateZ(15px);
+    transform: translateZ(20px) scale(1.02);
   }
 
-  /* Reduced float distance for calmer animation */
+  /* Reduced float distance even more for subtle movement */
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
+    50% { transform: translateY(-8px); }
   }
 
   @keyframes fadeInUp {
@@ -229,9 +229,9 @@
     }
   }
 
-  /* Slower float animation for calmer effect */
+  /* Slower float animation for very calm effect */
   .animate-float {
-    animation: float 8s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
   }
 
   .animate-fade-in-up {
@@ -326,8 +326,8 @@
       requestAnimationFrame(animate);
 
       shapes.forEach((shape, index) => {
-        shape.rotation.x += 0.0005 * (index + 1);
-        shape.rotation.y += 0.0005 * (index + 1);
+        shape.rotation.x += 0.0002 * (index + 1);
+        shape.rotation.y += 0.0002 * (index + 1);
         
         shape.position.x += (mouseX * 0.3 - shape.position.x) * 0.001;
         shape.position.y += (mouseY * 0.3 - shape.position.y) * 0.001;
