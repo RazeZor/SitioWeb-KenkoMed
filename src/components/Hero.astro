@@ -325,10 +325,15 @@
     function animate() {
       requestAnimationFrame(animate);
 
+      const targetRotationX = mouseY * 0.1;
+      const targetRotationY = mouseX * 0.1;
+
       shapes.forEach((shape, index) => {
-        shape.rotation.x += 0.0002 * (index + 1);
-        shape.rotation.y += 0.0002 * (index + 1);
-        
+        // Rotación sutil basada en la posición del ratón
+        shape.rotation.x += (targetRotationX - shape.rotation.x) * 0.02;
+        shape.rotation.y += (targetRotationY - shape.rotation.y) * 0.02;
+
+        // Movimiento de posición existente
         shape.position.x += (mouseX * 0.3 - shape.position.x) * 0.001;
         shape.position.y += (mouseY * 0.3 - shape.position.y) * 0.001;
       });
