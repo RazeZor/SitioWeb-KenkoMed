@@ -4,22 +4,24 @@
   <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
     
     <!-- Logo -->
-    <h1>Aqui va logo</h1>
+    <a href="/" class="flex items-center">
+      <img id="logo" src="/kenkomedBlanco.webp" alt="Kenkomed Logo" class="h-10 w-auto invert transition-all duration-300" />
+    </a>
 
     <!-- Navigation Links (Desktop) -->
     <div class="hidden md:flex items-center space-x-8">
-      <a href="#inicio" class="nav-link text-white hover:text-primary-300 font-medium text-lg transition">Inicio</a>
-      <a href="#servicios" class="nav-link text-white hover:text-primary-300 font-medium text-lg transition">Servicios</a>
-      <a href="#beneficios" class="nav-link text-white hover:text-primary-300 font-medium transition text-lg">Funcionalidades</a>
-      <a href="#equipo" class="nav-link text-white hover:text-primary-300 font-medium transition text-lg">Quienes Somos?</a>
-      <a href="#contacto" class="nav-link text-white hover:text-primary-300 font-medium transition text-lg">Contacto</a>
+      <a href="#inicio" class="nav-link text-white hover:text-teal-300 font-medium text-lg transition">Inicio</a>
+      <a href="#servicios" class="nav-link text-white hover:text-teal-300 font-medium text-lg transition">Servicios</a>
+      <a href="#funcionalidades" class="nav-link text-white hover:text-teal-300 font-medium transition text-lg">Funcionalidades</a>
+      <a href="#equipo" class="nav-link text-white hover:text-teal-300 font-medium transition text-lg">Quienes Somos?</a>
+      <a href="#contacto" class="nav-link text-white hover:text-teal-300 font-medium transition text-lg">Contacto</a>
     </div>
 
-    <!-- CTA Button (Desktop) -->
+    <!-- Updated CTA button to use new design system gradient -->
     <div class="hidden md:block">
-      <button class="group bg-gradient-to-r from-primary-500 to-sky-500 text-white px-8 py-3 rounded-full font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-        Conocer más
-      </button>
+      <a href="/demo" class="group bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block">
+        Ver Demo
+      </a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -34,13 +36,14 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md rounded-b-2xl">
     <div class="flex flex-col space-y-4 p-6">
-      <a href="#inicio" class="text-gray-700 hover:text-primary-600 font-medium">Inicio</a>
-      <a href="#servicios" class="text-gray-700 hover:text-primary-600 font-medium">Servicios</a>
-      <a href="#funcionalidades" class="text-gray-700 hover:text-primary-600 font-medium">Funcionalidades</a>
-      <a href="#equipo" class="text-gray-700 hover:text-primary-600 font-medium">Quienes Somos?</a>
-      <a href="#contacto" class="text-gray-700 hover:text-primary-600 font-medium">Contacto</a>
-      <a href="#contacto" class="bg-gradient-to-r from-primary-500 to-sky-500 text-white px-6 py-2.5 rounded-full font-medium text-center shadow-md">
-        Ver Demostración
+      <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+      <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+      <a href="#funcionalidades" class="text-gray-700 hover:text-blue-600 font-medium">Funcionalidades</a>
+      <a href="#equipo" class="text-gray-700 hover:text-blue-600 font-medium">Quienes Somos?</a>
+      <a href="#contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
+      <!-- Updated mobile CTA to match new design system -->
+      <a href="/demo" class="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-6 py-2.5 rounded-full font-medium text-center shadow-md">
+        Ver Demo
       </a>
     </div>
   </div>
@@ -66,27 +69,27 @@
       header.classList.remove("bg-transparent");
 
       navLinks.forEach(link => {
-        link.classList.remove("text-white", "hover:text-primary-300");
-        link.classList.add("text-gray-900", "hover:text-primary-400");
+        link.classList.remove("text-white", "hover:text-teal-300");
+        link.classList.add("text-gray-900", "hover:text-blue-600");
       });
 
       menuIcon.classList.remove("text-white");
       menuIcon.classList.add("text-gray-900");
 
-      logo.classList.remove("invert"); // muestra logo normal en fondo blanco
+      logo.classList.remove("invert");
     } else {
       header.classList.add("bg-transparent");
       header.classList.remove("bg-white", "shadow-md");
 
       navLinks.forEach(link => {
-        link.classList.add("text-white", "hover:text-primary-300");
-        link.classList.remove("text-gray-900", "hover:text-primary-400");
+        link.classList.add("text-white", "hover:text-teal-300");
+        link.classList.remove("text-gray-900", "hover:text-blue-600");
       });
 
       menuIcon.classList.add("text-white");
       menuIcon.classList.remove("text-gray-900");
 
-      logo.classList.add("invert"); // logo claro sobre fondo hero
+      logo.classList.add("invert");
     }
   });
 </script>

@@ -1,0 +1,175 @@
+---
+// New Features/Functionalities Section
+const features = [
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    </svg>`,
+    title: "Historias Clínicas Digitales",
+    description: "Registros médicos completos y seguros con acceso instantáneo desde cualquier dispositivo.",
+    color: "primary"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+    </svg>`,
+    title: "Análisis y Reportes",
+    description: "Visualización de datos con gráficos interactivos y reportes automáticos para mejores decisiones.",
+    color: "teal"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+    </svg>`,
+    title: "Cuestionarios Clínicos",
+    description: "Automatización de evaluaciones clínicas con escalas validadas (EVA, PSFS, Barthel, etc.).",
+    color: "emerald"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+    </svg>`,
+    title: "Gestión de Pacientes",
+    description: "Seguimiento personalizado con alertas, recordatorios y evolución del tratamiento.",
+    color: "primary"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+    </svg>`,
+    title: "Seguridad Avanzada",
+    description: "Encriptación de datos, respaldos automáticos y cumplimiento de normativas de salud.",
+    color: "teal"
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+    </svg>`,
+    title: "Agenda Inteligente",
+    description: "Gestión de citas con recordatorios automáticos y optimización de horarios.",
+    color: "emerald"
+  }
+];
+---
+
+<section id="funcionalidades" class="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-teal-100 to-transparent rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16 section-animate">
+      <div class="inline-flex items-center bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-200 rounded-full px-5 py-2 text-blue-700 font-semibold text-sm mb-6 shadow-sm">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        Funcionalidades Principales
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        Todo lo que necesitas en
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-600 to-emerald-600">
+          una sola plataforma
+        </span>
+      </h2>
+      
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        Kenkomed integra todas las herramientas esenciales para la gestión clínica moderna,
+        optimizando tu tiempo y mejorando la calidad de atención.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {features.map((feature, index) => (
+        <div 
+          class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl border border-slate-100 hover:border-transparent transition-all duration-500 hover:-translate-y-2 section-animate"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          <!-- Gradient border on hover -->
+          <div class={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${
+            feature.color === 'primary' ? 'from-blue-500/20 to-blue-600/20' :
+            feature.color === 'teal' ? 'from-teal-500/20 to-teal-600/20' :
+            'from-emerald-500/20 to-emerald-600/20'
+          } blur-xl`}></div>
+          
+          <div class="relative z-10">
+            <!-- Icon -->
+            <div class={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${
+              feature.color === 'primary' ? 'bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg shadow-blue-500/30' :
+              feature.color === 'teal' ? 'bg-gradient-to-br from-teal-500 to-teal-600 shadow-lg shadow-teal-500/30' :
+              'bg-gradient-to-br from-emerald-500 to-emerald-600 shadow-lg shadow-emerald-500/30'
+            }`}>
+              <div class="text-white">
+                <Fragment set:html={feature.icon} />
+              </div>
+            </div>
+
+            <!-- Content -->
+            <h3 class={`text-xl font-bold mb-3 transition-colors duration-300 ${
+              feature.color === 'primary' ? 'text-slate-900 group-hover:text-blue-600' :
+              feature.color === 'teal' ? 'text-slate-900 group-hover:text-teal-600' :
+              'text-slate-900 group-hover:text-emerald-600'
+            }`}>
+              {feature.title}
+            </h3>
+            
+            <p class="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+              {feature.description}
+            </p>
+
+            <!-- Hover arrow -->
+            <div class={`mt-4 flex items-center font-semibold text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 ${
+              feature.color === 'primary' ? 'text-blue-600' :
+              feature.color === 'teal' ? 'text-teal-600' :
+              'text-emerald-600'
+            }`}>
+              Conocer más
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center section-animate">
+      <div class="inline-flex flex-col sm:flex-row gap-4">
+        <a href="/demo" class="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 inline-flex items-center justify-center">
+          <span class="relative z-10">Ver Demo Interactiva</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+          <div class="absolute inset-0 bg-gradient-to-r from-teal-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </a>
+        
+        <a href="#contacto" class="group bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-slate-200 hover:border-blue-600 transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center">
+          Solicitar Información
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

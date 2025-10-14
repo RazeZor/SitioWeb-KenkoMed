@@ -7,7 +7,7 @@ const servicios = [
     descripcion: "Algoritmos Clinicos que asisten y ayudan a los profesionales en la toma de decisiones médicas basadas en datos y estándares clínicos.",
     imagen: "https://caensaclinicaltrials.com/wp-content/uploads/2020/11/medicina-basada-en-evidencia.jpg",
     caracteristicas: ["Historiales digitales", "Seguimiento personalizado", "Interfaz intuitiva"],
-    color: "primary"
+    color: "blue"
   },
   {
     tipoIcono: "iframe",
@@ -16,7 +16,7 @@ const servicios = [
     descripcion: "Semiautomatizacion de cuestionarios clínicos para agilizar la recopilación de datos y mejorar la precisión en diagnósticos y tratamientos, parametrizadas por sesiones",
     imagen: "https://www.unitecoprofesional.es/blog/wp-content/uploads/2021/11/machine-learning-medicina-1024x577.jpg",
     caracteristicas: ["Bartel", "Proceso de anamnesis", "Escalas de dolor (PSFS, GROC, EVA, ENA), Entre otros"],
-    color: "primary"
+    color: "teal"
   },
   {
     tipoIcono: "iframe",
@@ -25,7 +25,7 @@ const servicios = [
     descripcion: "Generación automática de informes, estadísticas de progreso y análisis de datos para mejores decisiones.",
     imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center",
     caracteristicas: ["Informes automáticos", "Estadísticas de progreso", "Análisis de datos"],
-    color: "primary"
+    color: "emerald"
   },
   {
     tipoIcono: "iframe",
@@ -34,7 +34,7 @@ const servicios = [
     descripcion: "Gestión administrativa completa con facturación, inventarios y controles de acceso de máxima seguridad.",
     imagen: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=1920&h=1080&fit=crop&crop=center",
     caracteristicas: ["Facturación integrada", "Control de inventarios", "Máxima seguridad"],
-    color: "primary"
+    color: "blue"
   }
 ];
 
@@ -44,12 +44,12 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
 <section id="servicios" class="relative">
   
   <!-- Sección de Encabezado -->
-  <div class="bg-gradient-to-br from-gray-50 to-primary-50 py-16 sm:py-20">
+  <div class="bg-gradient-to-br from-slate-50 to-slate-100 py-16 sm:py-20">
     <div class="container mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
-        Nuestros <span class="text-primary-600">Servicios</span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6">
+        Nuestros <span class="text-blue-600">Servicios</span>
       </h2>
-      <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
+      <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
         Soluciones integrales diseñadas específicamente para clínicas de kinesiología
       </p>
     </div>
@@ -72,8 +72,12 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
                 class="w-full h-full object-cover transform transition-transform duration-[8000ms] ease-out hover:scale-105"
               />
               <!-- Superposición de Gradiente -->
-              <div class={`absolute inset-0 bg-gradient-to-r ${servicio.color === 'primary' ? 'from-primary-900/75 via-primary-800/65 to-primary-600/55' : 'from-medical-900/75 via-medical-800/65 to-medical-600/55'}`}></div>
-              <div class="absolute inset-0 bg-black/25"></div>
+              <div class={`absolute inset-0 ${
+                servicio.color === 'blue' ? 'bg-gradient-to-r from-blue-900/75 via-blue-800/65 to-blue-700/55' :
+                servicio.color === 'teal' ? 'bg-gradient-to-r from-teal-900/75 via-teal-800/65 to-teal-700/55' :
+                'bg-gradient-to-r from-emerald-900/75 via-emerald-800/65 to-emerald-700/55'
+              }`}></div>
+              <div class="absolute inset-0 bg-slate-950/25"></div>
             </div>
 
             <!-- Tarjeta de Contenido -->
@@ -83,8 +87,16 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
               <div class="text-white space-y-6 sm:space-y-8 animacion-deslizar-arriba">
                 
                 <!-- Insignia de Icono -->
-                <div class={`inline-flex p-3 sm:p-4 rounded-2xl ${servicio.color === 'primary' ? 'bg-primary-500/25' : 'bg-medical-500/25'} backdrop-blur-sm border ${servicio.color === 'primary' ? 'border-primary-300/40' : 'border-medical-300/40'} shadow-xl`}>
-                  <div class={`${servicio.color === 'primary' ? 'text-primary-300' : 'text-medical-300'}`}>
+                <div class={`inline-flex p-3 sm:p-4 rounded-2xl ${
+                  servicio.color === 'blue' ? 'bg-blue-500/25 border-blue-300/40' :
+                  servicio.color === 'teal' ? 'bg-teal-500/25 border-teal-300/40' :
+                  'bg-emerald-500/25 border-emerald-300/40'
+                } backdrop-blur-sm border shadow-xl`}>
+                  <div class={`${
+                    servicio.color === 'blue' ? 'text-blue-300' :
+                    servicio.color === 'teal' ? 'text-teal-300' :
+                    'text-emerald-300'
+                  }`}>
                     {servicio.tipoIcono === "iframe" ? (
                       <iframe src={servicio.srcIcono} width="64" height="64" class="sm:w-20 sm:h-20" frameborder="0"></iframe>
                     ) : (
@@ -101,7 +113,7 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
                 </div>
 
                 <!-- Descripción -->
-                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg text-pretty">
+                <p class="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-lg text-pretty">
                   {servicio.descripcion}
                 </p>
 
@@ -109,15 +121,23 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
                 <div class="space-y-3 sm:space-y-4">
                   {servicio.caracteristicas.map(caracteristica => (
                     <div class="flex items-center space-x-3 sm:space-x-4 text-sm sm:text-base md:text-lg">
-                      <div class={`w-2 h-2 rounded-full ${servicio.color === 'primary' ? 'bg-primary-400' : 'bg-medical-400'} flex-shrink-0`}></div>
-                      <span class="text-gray-100">{caracteristica}</span>
+                      <div class={`w-2 h-2 rounded-full ${
+                        servicio.color === 'blue' ? 'bg-blue-400' :
+                        servicio.color === 'teal' ? 'bg-teal-400' :
+                        'bg-emerald-400'
+                      } flex-shrink-0`}></div>
+                      <span class="text-slate-100">{caracteristica}</span>
                     </div>
                   ))}
                 </div>
 
                 <!-- Botón de Llamada a la Acción -->
                 <div class="pt-3 sm:pt-4">
-                  <button class={`grupo px-6 sm:px-8 py-3 sm:py-4 ${servicio.color === 'primary' ? 'bg-primary-600 hover:bg-primary-700 focus:ring-primary-500' : 'bg-medical-600 hover:bg-medical-700 focus:ring-medical-500'} text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2`}>
+                  <button class={`grupo px-6 sm:px-8 py-3 sm:py-4 ${
+                    servicio.color === 'blue' ? 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500' :
+                    servicio.color === 'teal' ? 'bg-teal-600 hover:bg-teal-700 focus:ring-teal-500' :
+                    'bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500'
+                  } text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2`}>
                     <span class="flex items-center">
                       Explorar servicio
                       <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,8 +154,8 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
 
       <!-- Controles de navegación mejorados -->
       <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div class="flex items-center space-x-4 bg-black/30 backdrop-blur-sm rounded-full px-6 py-3">
-          <button id="botonAnterior" class="p-2 text-white hover:text-primary-300 transition-colors" aria-label="Slide anterior">
+        <div class="flex items-center space-x-4 bg-slate-900/30 backdrop-blur-sm rounded-full px-6 py-3">
+          <button id="botonAnterior" class="p-2 text-white hover:text-teal-300 transition-colors" aria-label="Slide anterior">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
@@ -151,7 +171,7 @@ const slidesInfinitos = [...servicios, ...servicios, ...servicios];
             ))}
           </div>
           
-          <button id="botonSiguiente" class="p-2 text-white hover:text-primary-300 transition-colors" aria-label="Siguiente slide">
+          <button id="botonSiguiente" class="p-2 text-white hover:text-teal-300 transition-colors" aria-label="Siguiente slide">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>

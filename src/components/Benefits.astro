@@ -67,7 +67,7 @@ const benefits = [
 
 
 
-<section id="beneficios" class="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+<section id="beneficios" class="py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 relative overflow-hidden">
   <!-- Adding animated background elements -->
   <div class="absolute inset-0 overflow-hidden">
     <div class="floating-shapes">
@@ -80,14 +80,13 @@ const benefits = [
 
   <div class="container mx-auto px-6 relative z-10 ">
     <div class="text-center mb-16 section-animate">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-balance">
-        ¿Por Qué Elegir <span class="text-primary-600 relative">
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 text-balance">
+        ¿Por Qué Elegir <span class="text-blue-600 relative">
           Kenkomed
-          <!-- Adding decorative underline -->
-          <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 to-sky-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+          <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-teal-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
         </span>?
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
         Más de 500 clínicas confían en nuestro sistema para optimizar sus operaciones 
         y brindar una mejor experiencia a sus pacientes.
       </p>
@@ -99,16 +98,15 @@ const benefits = [
         <div class="group benefit-card section-animate relative overflow-hidden contents"
              style={`animation-delay: ${index * 0.1}s;`}>
           
-          <!-- Background image with overlay -->
           <div class="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary-600/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
           </div>
           
           <!-- Card content -->
-          <div class="relative z-10 bg-white/90 backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-100 group-hover:border-primary-200 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary-500/20 group-hover:-translate-y-2">
+          <div class="relative z-10 bg-white/90 backdrop-blur-sm rounded-2xl p-8 h-full border border-slate-200 group-hover:border-teal-300 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-teal-500/20 group-hover:-translate-y-2">
             
             <!-- Interactive icon with pulse effect -->
-            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-sky-300 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 relative overflow-hidden group-hover:scale-110 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary-500/50">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-teal-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 relative overflow-hidden group-hover:scale-110 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-teal-500/50">
               <div class="absolute inset-0 bg-white/20 rounded-2xl transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
               <div class="relative z-10 transform group-hover:rotate-12 transition-transform duration-500">
                 <Fragment set:html={benefit.icon} />
@@ -118,16 +116,16 @@ const benefits = [
               <div class="absolute inset-0 rounded-2xl border-2 border-white/20 animate-ping opacity-0 group-hover:opacity-100" style="animation-delay: 0.5s;"></div>
             </div>
             
-            <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-primary-600 transition-colors duration-300 text-center">
+            <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 text-center">
               {benefit.title}
             </h3>
             
-            <p class="text-gray-600 leading-relaxed text-center group-hover:text-gray-700 transition-colors duration-300">
+            <p class="text-slate-600 leading-relaxed text-center group-hover:text-slate-700 transition-colors duration-300">
               {benefit.description}
             </p>
 
             <!-- Decorative corner accent -->
-            <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary-400/20 to-transparent rounded-bl-2xl transform translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
+            <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-teal-400/20 to-transparent rounded-bl-2xl transform translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
           </div>
         </div>
       ))}
@@ -137,7 +135,7 @@ const benefits = [
 </section>
 
 <style>
-  /* Adding enhanced animations and visual effects */
+  /* Updated floating shapes colors to match design system */
   .floating-shapes {
     position: absolute;
     width: 100%;
@@ -147,7 +145,7 @@ const benefits = [
   .shape {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+    background: linear-gradient(45deg, rgba(37, 99, 235, 0.1), rgba(20, 184, 166, 0.1));
     animation: float 6s ease-in-out infinite;
   }
 
