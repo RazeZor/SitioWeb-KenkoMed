@@ -3,7 +3,7 @@
 // Componente Astro con Three.js y mockup 3D
 ---
 
-<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" role="banner" aria-label="Sección principal - Software para kinesiólogos">
   
   <!-- Three.js Canvas para elementos médicos 3D -->
   <canvas id="three-canvas" class="absolute inset-0 z-0"></canvas>
@@ -40,14 +40,14 @@
               Kenkomed
             </span>
           </h1>
-          <p class="text-2xl sm:text-3xl font-light text-slate-200">
-            Digitaliza tu centro de kinesiología
-          </p>
+          <h2 class="text-2xl sm:text-3xl font-light text-slate-200">
+            Software para Kinesiólogos | Digitaliza tu Centro de Kinesiología
+          </h2>
         </div>
 
         <!-- Description -->
         <p class="text-lg text-slate-300 leading-relaxed max-w-xl animate-fade-in-up" style="animation-delay: 0.2s;">
-          Sistema de Soporte a la Decisión Clínica que optimiza el seguimiento personalizado de pacientes y mejora la calidad de atención con <span class="text-teal-300 font-semibold">registros médicos digitales completos</span>.
+          <strong>Sistema de Soporte a la Decisión Clínica (DSS)</strong> para fisioterapeutas y kinesiólogos. Optimiza el seguimiento personalizado de pacientes, mejora la calidad de atención con <span class="text-teal-300 font-semibold">historias clínicas digitales</span>, cuestionarios automatizados (EVA, PSFS, Barthel) y gestión integral de tu centro kinesiológico.
         </p>
 
         <!-- Features Mini List -->
@@ -57,41 +57,41 @@
             <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            <span>100% Seguro</span>
+            <span>Seguridad de Datos Médicos</span>
           </div>
           <div class="flex items-center gap-2 text-sm text-slate-300">
             <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            <span>Fácil implementación</span>
+            <span>Implementación Rápida</span>
           </div>
           <div class="flex items-center gap-2 text-sm text-slate-300">
             <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            <span>Soporte 24/7</span>
+            <span>Soporte Técnico Especializado</span>
           </div>
         </div>
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
           <!-- Updated button gradient with logo colors -->
-          <a href="/demo" class="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-500 hover:to-teal-500 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30 inline-flex items-center justify-center gap-2">
-            <span>Ver Demo en Vivo</span>
+          <a href="/demo" class="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-500 hover:to-teal-500 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30 inline-flex items-center justify-center gap-2" aria-label="Ver demostración en vivo del software">
+            <span>Ver Demo del Software</span>
             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
           </a>
           
-          <button class="group relative bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-teal-400/30 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105">
+          <a href="#contacto" class="group relative bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-teal-400/30 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105" aria-label="Solicitar información sobre el software para kinesiólogos">
             Solicitar Información
-          </button>
+          </a>
         </div>
 
       </div>
 
       <!-- Right Column - Mockup 3D -->
-      <div class="relative lg:block animate-fade-in-up" style="animation-delay: 0.2s;">
+      <div class="relative lg:block animate-fade-in-up" style="animation-delay: 0.2s;" role="img" aria-label="Interfaz del software de gestión clínica para kinesiólogos">
         <div class="mockup-container animate-subtle-float">
           
           <!-- Updated glow effects with logo colors -->
@@ -118,8 +118,8 @@
               <!-- Header -->
               <div class="flex items-center justify-between">
                 <div>
-                  <h3 class="text-white font-semibold text-lg">Panel de Pacientes</h3>
-                  <p class="text-slate-400 text-sm">Gestión integral de historias clínicas</p>
+                  <h3 class="text-white font-semibold text-lg">Panel de Gestión de Pacientes</h3>
+                  <p class="text-slate-400 text-sm">Historias clínicas digitales y seguimiento personalizado</p>
                 </div>
                 <!-- Updated icon background to logo blue -->
                 <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">

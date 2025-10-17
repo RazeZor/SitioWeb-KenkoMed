@@ -52,7 +52,7 @@ const features = [
 ];
 ---
 
-<section id="funcionalidades" class="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+<section id="funcionalidades" class="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden" aria-label="Funcionalidades del software para kinesiólogos">
   <!-- Background decoration -->
   <div class="absolute inset-0 opacity-30">
     <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl"></div>
@@ -70,24 +70,25 @@ const features = [
       </div>
       
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-        Todo lo que necesitas en
+        Software Completo para Kinesiólogos:
         <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600">
-          una sola plataforma
+          Todo en una Plataforma
         </span>
       </h2>
       
       <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        Kenkomed integra todas las herramientas esenciales para la gestión clínica moderna,
-        optimizando tu tiempo y mejorando la calidad de atención.
+        <strong>Kenkomed</strong> integra todas las herramientas esenciales para la <strong>gestión clínica de kinesiología</strong>: historias clínicas digitales, cuestionarios automatizados, agenda inteligente y reportes clínicos. Optimiza tu tiempo y mejora la calidad de atención a tus pacientes.
       </p>
     </div>
 
     <!-- Features Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
       {features.map((feature, index) => (
-        <div 
+        <article 
           class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl border border-slate-100 hover:border-transparent transition-all duration-500 hover:-translate-y-2 section-animate"
           style={`animation-delay: ${index * 0.1}s;`}
+          itemscope
+          itemtype="https://schema.org/SoftwareFeature"
         >
           <!-- Gradient border on hover -->
           <div class={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${
@@ -113,11 +114,11 @@ const features = [
               feature.color === 'primary' ? 'text-slate-900 group-hover:text-blue-600' :
               feature.color === 'teal' ? 'text-slate-900 group-hover:text-teal-600' :
               'text-slate-900 group-hover:text-teal-600'
-            }`}>
+            }`} itemprop="name">
               {feature.title}
             </h3>
             
-            <p class="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+            <p class="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300" itemprop="description">
               {feature.description}
             </p>
 
@@ -133,7 +134,7 @@ const features = [
               </svg>
             </div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
 

@@ -2,20 +2,156 @@
 export interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
-const { title, description = "Kenkomed - Sistema clínico moderno para kinesiología y psicología" } = Astro.props;
+const { 
+  title, 
+  description = "Software para kinesiólogos y fisioterapeutas. Sistema de gestión clínica DSS con historias clínicas digitales, cuestionarios automatizados y seguimiento de pacientes. Optimiza tu centro de kinesiología.",
+  keywords = "software para kinesiólogos, sistema para fisioterapeutas, gestión clínica kinesiología, historias clínicas digitales, software médico kinesiología, sistema DSS clínico, gestión pacientes fisioterapia, software centro kinesiológico, ficha clínica digital, cuestionarios clínicos automatizados",
+  image = "/og-image.jpg",
+  url = Astro.url.href,
+  type = "website"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteName = "Kenkomed";
 ---
 
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/LogoKenKoMed.jpeg" />
-    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Kenkomed" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.url)} />
+    <meta name="twitter:creator" content="@kenkomed" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1B75BC" />
+    <meta name="msapplication-TileColor" content="#1B75BC" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CL" />
+    <meta name="geo.placename" content="Chile" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/LogoKenKoMed.jpeg" />
+    <link rel="apple-touch-icon" href="/LogoKenKoMed.jpeg" />
+    
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Kenkomed",
+        "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Medical Practice Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CLP",
+          "availability": "https://schema.org/InStock"
+        },
+        "description": "Software profesional para kinesiólogos y fisioterapeutas. Sistema de gestión clínica con historias clínicas digitales, cuestionarios automatizados y seguimiento de pacientes.",
+        "url": "https://www.kenkomed.com",
+        "image": "https://www.kenkomed.com/LogoKenKoMed.jpeg",
+        "provider": {
+          "@type": "Organization",
+          "name": "Kenkomed",
+          "url": "https://www.kenkomed.com",
+          "logo": "https://www.kenkomed.com/LogoKenKoMed.jpeg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Spanish"]
+          }
+        },
+        "featureList": [
+          "Historias clínicas digitales",
+          "Sistema de Soporte a la Decisión Clínica (DSS)",
+          "Cuestionarios clínicos automatizados (EVA, PSFS, Barthel)",
+          "Gestión de pacientes",
+          "Reportes y análisis clínicos",
+          "Agenda inteligente",
+          "Seguridad de datos médicos"
+        ],
+        "audience": {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Kinesiólogos, Fisioterapeutas, Profesionales de la salud"
+        }
+      }
+    </script>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Kenkomed",
+        "url": "https://www.kenkomed.com",
+        "logo": "https://www.kenkomed.com/LogoKenKoMed.jpeg",
+        "description": "Software líder para gestión clínica de kinesiología y fisioterapia en Chile",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CL"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/kenkomed",
+          "https://www.facebook.com/kenkomed",
+          "https://www.instagram.com/kenkomed"
+        ]
+      }
+    </script>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Kenkomed",
+        "url": "https://www.kenkomed.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.kenkomed.com/buscar?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
